@@ -1,4 +1,4 @@
-/* CSS - styles.css */
+
 * {
     margin: 0;
     padding: 0;
@@ -16,6 +16,32 @@
     --padding-x: 2rem;
 }
 
+/* === 1. Import Gilroy Fonts === */
+@font-face {
+  font-family: 'Gilroy-Bold';
+  src: url('../assets/fonts/Gilroy-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Gilroy-Heavy';
+  src: url('../assets/fonts/Gilroy-Heavy.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Gilroy-Light';
+  src: url('../assets/fonts/Gilroy-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Gilroy-Medium';
+  src: url('../assets/fonts/Gilroy-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Gilroy-Regular';
+  src: url('../assets/fonts/Gilroy-Regular.ttf') format('truetype');
+}
+
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;
@@ -26,6 +52,7 @@ body {
     max-width: 100%;
     overflow-x: hidden;
     background-color: var(--background-color);
+    font-family: 'Gilroy-Regular', sans-serif;
 }
 
 /* Navigation styles */
