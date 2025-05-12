@@ -15,7 +15,7 @@
 <body>
     <header>
         <nav class="navbar">
-            <div class="logo"><img src="./assets/images/BrandhiveLogo.jpg" alt="Brandhive"></div>
+            <div class="logo"><img src="./assets/images/brandhive-logo-removebg.png" alt="Brandhive"></div>
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About Us</a></li>
@@ -27,12 +27,12 @@
     </header>
 
     <main>
+
+        <!-- Hero sectiom -->
         <section class="hero-container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1>We offer high quality, budget friendly, digital solutions for your business.</h1>
-                    <a href="#" class="cta-button">Get a quote</a>
-                </div>
+            <div class="hero-text">
+                <h1>We offer high quality, budget friendly, digital solutions for your business.</h1>
+                <a href="#" class="cta-button">Get a quote</a>
             </div>
             <div class="hero-media">
                 <!-- Placeholder image until video is ready -->
@@ -44,8 +44,125 @@
                 </video> -->
             </div>
         </section>
+
+        <!-- who are we section -->
+        <section class="know-us-section">
+            <div class="know-us-section-title">
+                <h1 class="know-us">Who we are</h1>
+            </div>
+
+            <div class="know-us-content">
+                <p>
+                    Brandhive is a digital solution agency specifically for businesses
+                    across the globe, to help you scale 10x in profit,
+                    meeting your goals, by giving you quality,
+                    budget friendly rates.
+                </p>
+                <a href="#" class="btn-see-more">See more</a>
+            </div>
+        </section>
+
+        <!-- Our Services Section -->
+        <section>
+            <div class="know-us-section-title">
+                <h1 class="know-us">Our Service </h1>
+            </div>
+            <div class="services-container">
+                <div class="services-grid">
+                    <div class="service-card">
+                        <h2 class="service-title">Web and Mobile Development</h2>
+                    </div>
+                    <div class="service-card">
+                        <h2 class="service-title">Digital Marketing</h2>
+                    </div>
+                    <div class="service-card">
+                        <h2 class="service-title">Social Media Management</h2>
+                    </div>
+                    <div class="service-card">
+                        <h2 class="service-title">UI/UX Product Design</h2>
+                    </div>
+                    <div class="service-card">
+                        <h2 class="service-title">Web and Mobile Development</h2>
+                    </div>
+                    <div class="service-card">
+                        <h2 class="service-title">Video Production</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="why-choose-us">
+            <img src="./assets/images/why-choose-us.jpg" alt="">
+        </section>
+
+        <section class="brandhive-partners">
+            <img src="./assets/images/image-icons/myteacher-logo-icon.jpg" alt="Myteacher Logo">
+            <img src="./assets/images/image-icons/charides-logo-icon.png" alt="Charrides Logo">
+            <img src="./assets/images/image-icons/flyway-logo-icon.jpg" alt="Flyway Logo">
+            <img src="./assets/images/image-icons/clients-acct-logo.jpg" alt="Clients Account Logo">
+        </section>
+
+        <section>
+            <div class="know-us-section-title">
+                <h1 class="know-us">Our Works </h1>
+            </div>
+
+            <div class="portfolio-container">
+                <div class="portfolio-grid">
+                    <div class="portfolio-item" onclick="openOverlay('./assets/images/clients-acct-logo.jpg')">
+                        <img src="./assets/images/clients-acct-logo.jpg" alt="Clients Account">
+                    </div>
+                    <div class="portfolio-item" onclick="openOverlay('./assets/images/charides-logo.jpg')">
+                        <img src="./assets/images/charides-logo.jpg" alt="Charrides">
+                    </div>
+                    <div class="portfolio-item" onclick="openOverlay('./assets/images/flyway-logo.png')">
+                        <img src="./assets/images/flyway-logo.png" alt="Flyway">
+                    </div>
+                    <div class="portfolio-item" onclick="openOverlay('./assets/images/myteacher-logo.jpg')">
+                        <img src="./assets/images/myteacher-logo.jpg" alt="MyTeacher">
+                    </div>
+
+                    <div class="see-more-container">
+                        <button class="see-more-btn">See more</button>
+                    </div>
+                </div>
+
+                <!-- Overlay -->
+                <div class="overlay" id="imageOverlay">
+                    <div class="overlay-content">
+                        <div class="close-btn" onclick="closeOverlay()">X</div>
+                        <img id="overlayImage" src="" alt="Enlarged image">
+                    </div>
+                </div>
+        </section>
     </main>
+
+
+
+        <script>
+            function openOverlay(imageSrc) {
+                const overlay = document.getElementById('imageOverlay');
+                const image = document.getElementById('overlayImage');
+
+                image.src = imageSrc;
+                overlay.style.display = 'flex';
+                document.body.style.overflow = 'hidden'; // Prevent scrolling
+            }
+
+            function closeOverlay() {
+                const overlay = document.getElementById('imageOverlay');
+                overlay.style.display = 'none';
+                document.body.style.overflow = 'auto'; // Enable scrolling again
+            }
+
+            // Close overlay when clicking outside the image
+            document.getElementById('imageOverlay').addEventListener('click', function (e) {
+                if (e.target === this) {
+                    closeOverlay();
+                }
+            });
+        </script>
+
 </body>
 
 </html>
-
