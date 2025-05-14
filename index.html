@@ -1,4 +1,3 @@
-<!-- HTML - index.html -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,19 +14,21 @@
 <body>
     <header>
         <nav class="navbar">
-            <div class="logo"><img src="./assets/images/brandhive-logo-removebg.png" alt="Brandhive"></div>
+            <div class="logo">
+                <a href="#"><img src="./assets/images/brandhive-logo-removebg.png" alt="Brandhive Logo">
+                </a>
+            </div>
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About Us</a></li>
                 <li><a href="#">Projects</a></li>
                 <li><a href="#">Contact</a></li>
-                <li class="brandhive-whatsapp-link"><a href="https://wa.me/234">Chat on Whatsapp</a></li>
             </ul>
+            <a href="https://wa.me/234" class="brandhive-whatsapp-link">Chat on Whatsapp</a>
         </nav>
     </header>
 
     <main>
-
         <!-- Hero sectiom -->
         <section class="hero-container">
             <div class="hero-text">
@@ -36,12 +37,11 @@
             </div>
             <div class="hero-media">
                 <!-- Placeholder image until video is ready -->
-                <img src="./assets/images/hero-image.jpg" alt="Digital Solutions" class="placeholder-image">
+                <!-- <img src="./assets/images/hero-image.jpg" alt="Digital Solutions" class="placeholder-image"> -->
                 <!-- Video element (commented out until ready) -->
-                <!-- <video autoplay loop muted playsinline>
-                    <source src="your-video-file.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video> -->
+                <video autoplay loop muted playsinline>
+                    <source src="./assets/videos/hero-video.mp4" type="video/mp4">
+                </video>
             </div>
         </section>
 
@@ -54,7 +54,7 @@
             <div class="know-us-content">
                 <p>
                     Brandhive is a digital solution agency specifically for businesses
-                    across the globe, to help you scale 10x in profit,
+                    across the globe , to help scale profit 10x than usual...
                     meeting your goals, by giving you quality,
                     budget friendly rates.
                 </p>
@@ -135,33 +135,40 @@
                     </div>
                 </div>
         </section>
+
+        <footer>
+            <h1>Hire Us!</h1>
+            <input type="text" placeholder="Name">
+            <a href="#"></a>
+
+        </footer>
     </main>
 
 
 
-        <script>
-            function openOverlay(imageSrc) {
-                const overlay = document.getElementById('imageOverlay');
-                const image = document.getElementById('overlayImage');
+    <script>
+        function openOverlay(imageSrc) {
+            const overlay = document.getElementById('imageOverlay');
+            const image = document.getElementById('overlayImage');
 
-                image.src = imageSrc;
-                overlay.style.display = 'flex';
-                document.body.style.overflow = 'hidden'; // Prevent scrolling
+            image.src = imageSrc;
+            overlay.style.display = 'flex';
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        }8
+
+        function closeOverlay() {
+            const overlay = document.getElementById('imageOverlay');
+            overlay.style.display = 'none';
+            document.body.style.overflow = 'auto'; // Enable scrolling again
+        }
+
+        // Close overlay when clicking outside the image
+        document.getElementById('imageOverlay').addEventListener('click', function (e) {
+            if (e.target === this) {
+                closeOverlay();
             }
-
-            function closeOverlay() {
-                const overlay = document.getElementById('imageOverlay');
-                overlay.style.display = 'none';
-                document.body.style.overflow = 'auto'; // Enable scrolling again
-            }
-
-            // Close overlay when clicking outside the image
-            document.getElementById('imageOverlay').addEventListener('click', function (e) {
-                if (e.target === this) {
-                    closeOverlay();
-                }
-            });
-        </script>
+        });
+    </script>
 
 </body>
 
