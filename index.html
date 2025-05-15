@@ -14,7 +14,8 @@
 
 <body>
     <header>
-        <a href="#" class="logo"><img loading="lazy" src="./assets/images/brandhive-logo-removebg.png" alt="Brandhive Logo"></a>
+        <a href="#" class="logo"><img loading="lazy" src="./assets/images/brandhive-logo-removebg.png"
+                alt="Brandhive Logo"></a>
         <nav>
             <a href="#">Home</a>
             <a href="#">About Us</a>
@@ -48,13 +49,13 @@
             </div>
 
             <div class="know-us-content">
-                <pre>
+                <p>
                     Brandhive is a digital solution agency specifically for businesses
                     across the globe , to help scale profit 10x than usual...
                     meeting your goals, by giving you quality,
                     budget friendly rates.
-                </pre>
-                <a href="#" class="btn-see-more">See more</a>
+                </p>
+                <a href="#">See more</a>
             </div>
         </section>
 
@@ -87,15 +88,22 @@
             </div>
         </section>
 
+        <!-- Why choose us -->
         <section class="why-choose-us">
             <img src="./assets/images/why-choose-us.jpg" alt="">
         </section>
 
-        <section class="brandhive-partners">
-            <img src="./assets/images/image-icons/myteacher-logo-icon.jpg" alt="Myteacher Logo">
-            <img src="./assets/images/image-icons/charides-logo-icon.png" alt="Charrides Logo">
-            <img src="./assets/images/image-icons/flyway-logo-icon.jpg" alt="Flyway Logo">
-            <img src="./assets/images/image-icons/clients-acct-logo.jpg" alt="Clients Account Logo">
+        <!-- Brandhives partners -->
+        <section>
+            <div class="know-us-section-title">
+                <h1 class="know-us">Our Trusted Partners </h1>
+            </div>
+            <div class="brandhive-partners">
+                <img src="./assets/images/image-icons/myteacher-logo-icon.jpg" alt="Myteacher Logo">
+                <img src="./assets/images/image-icons/charides-logo-icon.png" alt="Charrides Logo">
+                <img src="./assets/images/image-icons/flyway-logo-icon.jpg" alt="Flyway Logo">
+                <img src="./assets/images/image-icons/clients-acct-logo.jpg" alt="Clients Account Logo">
+            </div>
         </section>
 
         <section>
@@ -103,19 +111,20 @@
                 <h1 class="know-us">Our Works </h1>
             </div>
 
+            <!-- Our Services -->
             <div class="portfolio-container">
                 <div class="portfolio-grid">
-                    <div class="portfolio-item" onclick="openOverlay('./assets/images/clients-acct-logo.jpg')">
-                        <img src="./assets/images/clients-acct-logo.jpg" alt="Clients Account">
+                    <div class="portfolio-item" onclick="openOverlay('./assets/images/clients-acct-logo.png')">
+                        <img src="./assets/images/clients-acct-logo.png" alt="Clients Account">
                     </div>
-                    <div class="portfolio-item" onclick="openOverlay('./assets/images/charides-logo.jpg')">
-                        <img src="./assets/images/charides-logo.jpg" alt="Charrides">
+                    <div class="portfolio-item" onclick="openOverlay('./assets/images/charides-logo.png')">
+                        <img src="./assets/images/charides-logo.png" alt="Charrides">
                     </div>
                     <div class="portfolio-item" onclick="openOverlay('./assets/images/flyway-logo.png')">
                         <img src="./assets/images/flyway-logo.png" alt="Flyway">
                     </div>
-                    <div class="portfolio-item" onclick="openOverlay('./assets/images/myteacher-logo.jpg')">
-                        <img src="./assets/images/myteacher-logo.jpg" alt="MyTeacher">
+                    <div class="portfolio-item" onclick="openOverlay('./assets/images/myteacher-logo.png')">
+                        <img src="./assets/images/myteacher-logo.png" alt="MyTeacher">
                     </div>
 
                     <div class="see-more-container">
@@ -126,7 +135,9 @@
                 <!-- Overlay -->
                 <div class="overlay" id="imageOverlay">
                     <div class="overlay-content">
-                        <div class="close-btn" onclick="closeOverlay()">X</div>
+                        <div class="close-btn" onclick="closeOverlay()">
+                            <i class="fas fa-times"></i>
+                        </div>
                         <img id="overlayImage" src="" alt="Enlarged image">
                     </div>
                 </div>
@@ -140,32 +151,7 @@
         </footer>
     </main>
 
-
-
-    <script>
-        function openOverlay(imageSrc) {
-            const overlay = document.getElementById('imageOverlay');
-            const image = document.getElementById('overlayImage');
-
-            image.src = imageSrc;
-            overlay.style.display = 'flex';
-            document.body.style.overflow = 'hidden'; // Prevent scrolling
-        } 8
-
-        function closeOverlay() {
-            const overlay = document.getElementById('imageOverlay');
-            overlay.style.display = 'none';
-            document.body.style.overflow = 'auto'; // Enable scrolling again
-        }
-
-        // Close overlay when clicking outside the image
-        document.getElementById('imageOverlay').addEventListener('click', function (e) {
-            if (e.target === this) {
-                closeOverlay();
-            }
-        });
-    </script>
-
+    <script src="./assets/js/script.js"></script>
 </body>
 
-</html>
+</htpng

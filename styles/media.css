@@ -76,3 +76,119 @@
         font-size: 12px;
     }
 }
+
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 992px) {
+    .know-us-section-title {
+        padding: 5rem 2rem 1.5rem;
+    }
+
+    .know-us {
+        font-size: 6rem;
+    }
+
+    .know-us-content p {
+        font-size: 2.6rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .know-us {
+        width: 80%;
+        font-size: 5rem;
+    }
+
+    /* .know-us-content p {
+        font-size: 2.2rem;
+        padding: 0 2rem;
+    } */
+
+   .know-us-content a {
+        font-size: 1.8rem;
+        padding: 1.2rem 3.5rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .know-us-section-title {
+        padding: 4rem 1.5rem 1rem;
+    }
+
+    .know-us-content {
+        padding: 6rem 1.5rem;
+    }
+
+    .know-us {
+        font-size: 4rem;
+    }
+
+    /* .know-us-content p {
+        padding: 0 1rem;
+        font-size: 1.8rem;
+    } */
+
+    .know-us-content a {
+        font-size: 1.6rem;
+        padding: 1rem 3rem;
+    }
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 992px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        padding: 60px 20px;
+    }
+
+    .service-title {
+        font-size: 2rem;
+    }
+}
+
+
+/* Responsive adjustments */
+@media screen and (max-width: 992px) {
+    .brandhive-partners {
+        gap: 30px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .brandhive-partners img {
+        margin: 0 20px;
+        max-height: 60px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .brandhive-partners {
+        gap: 40px;
+        flex-direction: column;
+    }
+
+    .brandhive-partners img {
+        max-height: 50px;
+    }
+}
+
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-item {
+        height: 240px;
+    }
+}
