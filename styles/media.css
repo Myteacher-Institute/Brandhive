@@ -1,0 +1,78 @@
+/* Hero section responsive styles */
+@media screen and (max-width: 992px) {
+    .hero-text {
+        width: 90%;
+        margin-top: 220px;
+    }
+
+    .hero-text h1 {
+        font-size: 36px;
+    }
+
+    .hero-text a {
+        font-size: 2rem;
+        padding: 1rem 2.5rem;
+    }
+
+    .hero-media {
+        /* width: 95%; */
+        margin-top: 2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero-text {
+        /* width: 95%; */
+        margin-top: 200px;
+    }
+
+    .hero-text h1 {
+        font-size: 30px;
+    }
+
+    .hero-text a {
+        font-size: 1rem;
+        padding: 1rem 2rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .hero-container {
+        padding: 0 1.5rem;
+    }
+
+    .hero-text {
+        width: 100%;
+        margin-top: 180px;
+    }
+
+    .hero-text h1 {
+        font-size: 2.8rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-text a {
+        font-size: 1.6rem;
+        padding: 0.8rem 1.8rem;
+    }
+
+    .hero-media {
+        width: 100%;
+        border-radius: 20px;
+        margin-top: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .hero-text {
+        margin-top: 160px;
+    }
+
+    .hero-text h1 {
+        font-size: 22px;
+    }
+
+    .hero-text a {
+        font-size: 12px;
+    }
+}

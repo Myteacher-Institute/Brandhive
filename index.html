@@ -8,38 +8,34 @@
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/media.css">
     <title>Brandhive</title>
 </head>
 
 <body>
     <header>
-        <nav class="navbar">
-            <div class="logo">
-                <a href="#"><img src="./assets/images/brandhive-logo-removebg.png" alt="Brandhive Logo">
-                </a>
-            </div>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-            <a href="https://wa.me/234" class="brandhive-whatsapp-link">Chat on Whatsapp</a>
+        <a href="#" class="logo"><img src="./assets/images/brandhive-logo-removebg.png" alt="Brandhive Logo"></a>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Projects</a>
+            <a href="#">Contact</a>
         </nav>
+        <a href="https://wa.me/234" class="chat">Chat on Whatsapp</a>
     </header>
 
     <main>
         <!-- Hero sectiom -->
-        <section class="hero-container">
+        <section class="hero">
             <div class="hero-text">
                 <h1>We offer high quality, budget friendly, digital solutions for your business.</h1>
-                <a href="#" class="cta-button">Get a quote</a>
+                <a href="#">Get a quote</a>
             </div>
             <div class="hero-media">
                 <!-- Placeholder image until video is ready -->
                 <!-- <img src="./assets/images/hero-image.jpg" alt="Digital Solutions" class="placeholder-image"> -->
                 <!-- Video element (commented out until ready) -->
-                <video autoplay loop muted playsinline>
+                <video autoplay loop muted playsinline width="100%">
                     <source src="./assets/videos/hero-video.mp4" type="video/mp4">
                 </video>
             </div>
@@ -154,7 +150,7 @@
             image.src = imageSrc;
             overlay.style.display = 'flex';
             document.body.style.overflow = 'hidden'; // Prevent scrolling
-        }8
+        } 8
 
         function closeOverlay() {
             const overlay = document.getElementById('imageOverlay');
