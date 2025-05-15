@@ -170,6 +170,14 @@ header .chat:hover {
     border-radius: 33px;
 }
 
+.hero-media video {
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
 /*  Who we are section styling */
 .know-us-section {
     width: 100%;
@@ -195,6 +203,7 @@ header .chat:hover {
 }
 
 .know-us-content {
+    width: 100%;
     display: flex;
     padding: 20px;
     overflow: hidden;
@@ -237,8 +246,6 @@ header .chat:hover {
     color: var(--white-color);
     font-family: var(--light);
 }
-
-
 
 .btn-see-more {
     z-index: 2;
