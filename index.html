@@ -22,7 +22,7 @@
             <a href="#">Projects</a>
             <a href="#">Contact</a>
         </nav>
-        <a href="https://wa.me/234" class="chat">Chat on Whatsapp</a>
+        <a href="https://wa.me/2348153006465" class="chat">Chat on Whatsapp</a>
     </header>
 
     <main>
@@ -93,25 +93,52 @@
             <img src="./assets/images/why-choose-us.jpg" alt="">
         </section>
 
-        <!-- Brandhives partners -->
+        <!-- Simplified partner carousel without navigation controls -->
         <section>
             <div class="know-us-section-title">
-                <h1 class="know-us">Our Trusted Partners </h1>
+                <h1 class="know-us">Our Trusted Partners</h1>
             </div>
-            <div class="brandhive-partners">
-                <img src="./assets/images/image-icons/myteacher-logo-icon.jpg" alt="Myteacher Logo">
-                <img src="./assets/images/image-icons/charides-logo-icon.png" alt="Charrides Logo">
-                <img src="./assets/images/image-icons/flyway-logo-icon.jpg" alt="Flyway Logo">
-                <img src="./assets/images/image-icons/clients-acct-logo.jpg" alt="Clients Account Logo">
+            <div class="partners-carousel-container">
+                <div class="partners-carousel">
+                    <div class="carousel-track">
+                        <!-- Original slides -->
+                        <div class="carousel-slide">
+                            <img src="./assets/images/image-icons/myteacher-logo-icon.jpg" alt="Myteacher Logo">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="./assets/images/image-icons/charides-logo-icon.png" alt="Charrides Logo">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="./assets/images/image-icons/flyway-logo-icon.jpg" alt="Flyway Logo">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="./assets/images/image-icons/clients-acct-logo.jpg" alt="Clients Account Logo">
+                        </div>
+
+                        <!-- Duplicate slides for seamless looping -->
+                        <div class="carousel-slide">
+                            <img src="./assets/images/image-icons/myteacher-logo-icon.jpg" alt="Myteacher Logo">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="./assets/images/image-icons/charides-logo-icon.png" alt="Charrides Logo">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="./assets/images/image-icons/flyway-logo-icon.jpg" alt="Flyway Logo">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="./assets/images/image-icons/clients-acct-logo.jpg" alt="Clients Account Logo">
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
+
+        <!-- Our Services -->
         <section>
             <div class="know-us-section-title">
                 <h1 class="know-us">Our Works </h1>
             </div>
-
-            <!-- Our Services -->
             <div class="portfolio-container">
                 <div class="portfolio-grid">
                     <div class="portfolio-item" onclick="openOverlay('./assets/images/clients-acct-logo.png')">
@@ -143,11 +170,68 @@
                 </div>
         </section>
 
-        <footer>
-            <h1>Hire Us!</h1>
-            <input type="text" placeholder="Name">
-            <a href="#"></a>
+        <footer class="footer">
+            <div class="footer-container">
+                <!-- Logo -->
+                <div class="footer-logo">
+                    <a href="#" class="logo"><img src="./assets/images/brandhive-footer-logo-removebg.png"
+                            alt="Brandhive Logo"></a>
+                </div>
 
+                <!-- Tagline -->
+                <div class="footer-tagline">
+                    <h2>Let's help you scale your profit 10x your usual.</h2>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="footer-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Name" class="footer-input">
+                        <button class="footer-btn">Get quote</button>
+                    </div>
+                </div>
+
+                <!-- Services and Contact Info -->
+                <div class="footer-info">
+                    <div class="footer-services">
+                        <h3>Our Services</h3>
+                        <ul>
+                            <li>Branding and Design</li>
+                            <li>Digital Marketing</li>
+                            <li>Social Media Management</li>
+                            <li>UI/UX Product Design</li>
+                            <li>Video Production</li>
+                            <li>Web and Mobile Development</li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-contact">
+                        <div class="contact-section">
+                            <h3>Call us</h3>
+                            <p>08153006465</p>
+                            <p>09030057489</p>
+                        </div>
+
+                        <div class="contact-section">
+                            <h3>Email</h3>
+                            <p>contact@brandhive.ng</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Media and Legal -->
+                <div class="footer-bottom">
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+
+                    <div class="legal-links">
+                        <a href="#">Terms & conditions</a>
+                        <a href="#">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
         </footer>
     </main>
 

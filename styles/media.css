@@ -104,7 +104,7 @@
         padding: 0 2rem;
     } */
 
-   .know-us-content a {
+    .know-us-content a {
         font-size: 1.8rem;
         padding: 1.2rem 3.5rem;
     }
@@ -190,5 +190,71 @@
 
     .portfolio-item {
         height: 240px;
+    }
+}
+
+/* For responsive design */
+@media (max-width: 1024px) {
+    .carousel-slide {
+        min-width: calc(100% / 3);
+        /* Show 3 slides on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-slide {
+        min-width: calc(100% / 2);
+        /* Show 2 slides on tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-slide {
+        min-width: 100%;
+        /* Show 1 slide on mobile */
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .footer-tagline h2 {
+        font-size: 42px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-tagline h2 {
+        font-size: 36px;
+    }
+
+    .form-group {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .footer-info {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .footer-contact {
+        text-align: left;
+    }
+}
+
+@media (max-width: 580px) {
+    .footer-tagline h2 {
+        font-size: 28px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .legal-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
     }
 }
