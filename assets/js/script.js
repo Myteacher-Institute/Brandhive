@@ -20,18 +20,50 @@ document.getElementById('imageOverlay').addEventListener('click', function (e) {
     }
 });
 
-const video = document.getElementById('video');
-const btn = document.getElementById('playPauseBtn');
-const icon = btn.querySelector('i');
+document.addEventListener('DOMContentLoaded', function () {
+    const video = document.getElementById('video');
+    const btn = document.getElementById('playPauseBtn');
+    const icon = btn.querySelector('i');
 
-btn.addEventListener('click', () => {
-    if (video.paused) {
-        video.play();
-        icon.classList.remove('fa-play');
-        icon.classList.add('fa-pause');
-    } else {
-        video.pause();
-        icon.classList.remove('fa-pause');
-        icon.classList.add('fa-play');
+    function togglePlayPause() {
+        if (video.paused) {
+            video.play();
+            icon.classList.remove('fa-play');
+            icon.classList.add('fa-pause');
+        } else {
+            video.pause();
+            icon.classList.remove('fa-pause');
+            icon.classList.add('fa-play');
+        }
     }
+
+    btn.addEventListener('click', togglePlayPause);
 });
+
+
+(function () {
+    // Get all navigation links
+    const navLinks = document.querySelectorAll('header nav a');
+
+    // Set Home as active by default
+    navLinks[0].classList.add('active');
+
+    // Add click event listeners to each link
+    navLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+            // Prevent default anchor behavior
+            e.preventDefault();
+
+            // Remove active class from all links
+            navLinks.forEach(navLink => {
+                navLink.classList.remove('active');
+            });
+
+            // Add active class to the clicked link
+            this.classList.add('active');
+
+            // If you want to actually navigate to the page:
+            window.location.href = this.getAttribute('href');
+        });
+    });
+})();

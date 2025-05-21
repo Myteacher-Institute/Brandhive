@@ -1,4 +1,37 @@
-/* Hero section responsive styles */
+/* TABLET (1024px and below) */
+@media (max-width: 1024px) {
+  /* Tablet-specific styles here */
+}
+
+/* MOBILE (768px and below) */
+@media (max-width: 768px) {
+  /* Mobile-specific styles here */
+  .hero {
+    
+  }
+
+}
+
+/* PORTRAIT ORIENTATION */
+@media (orientation: portrait) {
+  /* Styles for portrait mode */
+}
+
+/* LANDSCAPE ORIENTATION */
+@media (orientation: landscape) {
+  /* Styles for landscape mode */
+}
+
+
+
+
+
+
+
+
+
+
+/* 
 @media screen and (max-width: 992px) {
     .hero-text {
         width: 90%;
@@ -15,21 +48,20 @@
     }
 
     .hero-media {
-        /* width: 95%; */
         margin-top: 2rem;
     }
 }
 
 @media screen and (max-width: 768px) {
     .hero-text {
-        /* width: 95%; */
         margin-top: 200px;
     }
-
+    
     .hero-text h1 {
         font-size: 30px;
+        align-items: flex-start;
     }
-
+    
     .hero-text a {
         font-size: 1rem;
         padding: 1rem 2rem;
@@ -49,6 +81,7 @@
     .hero-text h1 {
         font-size: 2.8rem;
         margin-bottom: 1.5rem;
+        justify-content: flex-start;
     }
 
     .hero-text a {
@@ -78,7 +111,6 @@
 }
 
 
-/* Media Queries for Responsiveness */
 @media screen and (max-width: 992px) {
     .know-us-section-title {
         padding: 5rem 2rem 1.5rem;
@@ -99,11 +131,6 @@
         font-size: 5rem;
     }
 
-    /* .know-us-content p {
-        font-size: 2.2rem;
-        padding: 0 2rem;
-    } */
-
     .know-us-content a {
         font-size: 1.8rem;
         padding: 1.2rem 3.5rem;
@@ -123,18 +150,12 @@
         font-size: 4rem;
     }
 
-    /* .know-us-content p {
-        padding: 0 1rem;
-        font-size: 1.8rem;
-    } */
-
     .know-us-content a {
         font-size: 1.6rem;
         padding: 1rem 3rem;
     }
 }
 
-/* Responsive Styles */
 @media screen and (max-width: 992px) {
     .services-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -155,8 +176,6 @@
     }
 }
 
-
-/* Responsive adjustments */
 @media screen and (max-width: 992px) {
     .brandhive-partners {
         gap: 30px;
@@ -181,8 +200,6 @@
     }
 }
 
-
-/* Responsive styles */
 @media screen and (max-width: 768px) {
     .portfolio-grid {
         grid-template-columns: 1fr;
@@ -193,25 +210,21 @@
     }
 }
 
-/* For responsive design */
 @media (max-width: 1024px) {
     .carousel-slide {
         min-width: calc(100% / 3);
-        /* Show 3 slides on medium screens */
     }
 }
 
 @media (max-width: 768px) {
     .carousel-slide {
         min-width: calc(100% / 2);
-        /* Show 2 slides on tablets */
     }
 }
 
 @media (max-width: 480px) {
     .carousel-slide {
         min-width: 100%;
-        /* Show 1 slide on mobile */
     }
 }
 
@@ -257,4 +270,4 @@
         align-items: center;
         gap: 10px;
     }
-}
+} */
