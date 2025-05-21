@@ -83,7 +83,7 @@ header::before {
 
 header .logo img {
     width: auto;
-    height: 60px;
+    height: 50px;
 }
 
 header nav {
@@ -148,7 +148,7 @@ header .chat:hover {
     width: 80%;
     display: flex;
     margin: 0 auto;
-    padding-top: 6rem;
+    padding-top: 1rem;
     align-items: center;
     flex-direction: column;
     justify-content: center;
