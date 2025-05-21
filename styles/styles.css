@@ -118,6 +118,10 @@ header nav a.active::after {
     width: 60%;
 }
 
+header nav a.active::after {
+    width: 60%;
+}
+
 /* Hover effect for non-active links */
 header nav a:not(.active):hover::after {
     background-color: var(--black-color);
