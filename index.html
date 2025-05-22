@@ -18,8 +18,7 @@
 
 <body>
     <header>
-        <a href="#" class="logo"><img loading="lazy" src="./assets/images/brandhive-logo-removebg.png"
-                alt="Brandhive Logo" alt="Brandhive Logo"></a>
+        <a href="#" class="logo"><img src="./assets/images/brandhive-logo-removebg.png" alt="Brandhive Logo"></a>
         <i class="fa-solid fa-bars" style="display: none;"></i>
         <nav>
             <a href="#brandhive-about">About Us</a>
@@ -34,7 +33,9 @@
         <!-- Hero sectiom -->
         <section class="hero">
             <div class="hero-text">
-                <h1>We offer high quality, budget friendly, digital <span>solutions</span> for businesses.</h1>
+                <h1 class="fade-in-up">We offer high quality, <span>budget</span> friendly, <span>digital</span>
+                    solutions for
+                    businesses.</h1>
                 <a href="#">Get a quote</a>
             </div>
             <div class="hero-media">
@@ -51,43 +52,57 @@
         <!-- who are we section -->
         <section class="know-us-section" id="brandhive-about">
             <div class="know-us-section-title">
-                <h1 class="know-us">Who we are</h1>
+                <h1 class="know-us fade-in-up">Who we are</h1>
             </div>
 
             <div class="know-us-content">
-                <p>
-                    Brandhive is a digital solution agency specifically for businesses
-                    across the globe , to help scale profit 10x than usual...
-                    meeting your goals, by giving you quality,
-                    budget friendly digital solutions.
-                </p>
-                <a href="#">See more</a>
+                <img src="../assets/images/who-are-we.webp" alt="Who we are" loading="lazy">
+                <div class="content-wrapper">
+                    <p>
+                        Brandhive is a digital solution agency specifically for businesses
+                        across the globe, to help scale profit 10x than usual... meeting your goals,
+                        by giving you quality, budget-friendly digital solutions.
+                    </p>
+                    <a href="#">See more</a>
+                </div>
+            </div>
             </div>
         </section>
 
         <!-- Our Services Section -->
         <section id="brandhive-services">
             <div class="know-us-section-title">
-                <h1 class="know-us">Our Services </h1>
+                <h1 class="know-us" fade-in-up>Our Services</h1>
             </div>
             <div class="services-container">
                 <div class="services-grid">
                     <div class="service-card branding">
+                        <img src="../assets/images/brandhive-branding-&-design.webp" alt="Branding & Design"
+                            loading="lazy">
                         <h2 class="service-title">Branding <br>&amp; Design</h2>
                     </div>
                     <div class="service-card marketing">
+                        <img src="../assets/images/brandhive-digital-marketing.webp" alt="SEO & Digital Marketing"
+                            loading="lazy">
                         <h2 class="service-title">SEO &amp; Digital<br> Marketing</h2>
                     </div>
                     <div class="service-card social">
+                        <img src="../assets/images/brandhive-social-media-management.webp" alt="Social Media Management"
+                            loading="lazy">
                         <h2 class="service-title">Social Media<br> Management</h2>
                     </div>
                     <div class="service-card uiux">
+                        <img src="../assets/images/brandhive-UIUX-design.webp" alt="UI/UX Design" loading="lazy">
                         <h2 class="service-title">UI/UX <br> Design</h2>
                     </div>
                     <div class="service-card video">
-                        <h2 class="service-title">Video<br> Production</h2>
+                        <img src="../assets/images/brandhive-video-production.webp" alt="Video Production"
+                            loading="lazy">
+                        <h2 class="service-title">Media &amp; Video<br> Production</h2>
                     </div>
                     <div class="service-card webdev">
+                        <img src="../assets/images/brandhive-web-&-app-development.webp" alt="Web & App Development"
+                            loading="lazy">
                         <h2 class="service-title">Web &amp; App<br> Development</h2>
                     </div>
                 </div>
@@ -97,7 +112,7 @@
         <!-- Why choose us -->
         <section class="why-choose-us-section">
             <div class="know-us-section-title">
-                <h1 class="know-us">Why choose us</h1>
+                <h1 class="know-us fade-in-up">Why choose us</h1>
             </div>
             <div>
                 <p class="why-choose-us-text">
@@ -110,7 +125,7 @@
         </section>
 
         <section class="video-wrapper">
-            <video id="video" poster="./assets/images/why-choose-us.webp" preload="metadata">
+            <video id="video" poster="./assets/images/why-choose-us.webp" preload="metadata" loading="lazy">
                 <source src="./assets/videos/why-choose-us.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
@@ -122,7 +137,7 @@
         <!-- Simplified partner carousel without navigation controls -->
         <section>
             <div class="know-us-section-title">
-                <h1 class="know-us">Our Clients</h1>
+                <h1 class="know-us fade-in-up">Our Clients</h1>
             </div>
             <div class="partners-carousel-container">
                 <div class="partners-carousel">
@@ -163,7 +178,7 @@
         <!-- Our Projects -->
         <section id="brandhive-projects">
             <div class="know-us-section-title">
-                <h1 class="know-us">Recent Projects </h1>
+                <h1 class="know-us fade-in-up">Recent Projects </h1>
             </div>
             <div class="portfolio-container">
                 <div class="portfolio-grid">
@@ -200,13 +215,13 @@
         <section>
             <div id="brandhive-contact" class="contact-row">
                 <a href="mailto:contact@brandhive.ng" class="contact-link">
-                    <i class="fa-solid fa-envelope fa-beat-fade"></i> contact@brandhive.ng
+                    <div class="brandhave-contact-icon"><i class="fa-solid fa-envelope"></i></div> contact@brandhive.ng
                 </a>
                 <a href="https://wa.me/23490300057489" class="contact-link">
-                    <i class="fa-brands fa-square-whatsapp fa-beat-fade"></i> 090300057489
+                    <div class="brandhave-contact-icon"><i class="fa-brands fa-square-whatsapp"></i></div> 090300057489
                 </a>
                 <a href="tel:090300057489" class="contact-link">
-                    <i class="fa-solid fa-phone fa-beat-fade"></i> 090300057489
+                    <div class="brandhave-contact-icon"><i class="fa-solid fa-phone"></i></div> 090300057489
                 </a>
             </div>
         </section>
@@ -216,7 +231,8 @@
             <div class="footer-container">
                 <!-- Tagline -->
                 <div class="footer-tagline">
-                    <h2>Let's help you <span>scale</span> your <span>profit</span> 10x your usual.</h2>
+                    <h2 class="fade-in-up">Let's help you <span>scale</span> your <span>profit</span> 10x your usual.
+                    </h2>
                 </div>
 
                 <!-- Contact Form -->
@@ -235,7 +251,7 @@
                             <i class="fa-brands fa-facebook"></i>
                         </a>
                         <a href="https://instagram.com/brandhive" target="_blank" aria-label="Instagram">
-                            <i class="fa-brands fa-square-instagram"></i>
+                            <i class="fa-brands fa-instagram"></i>
                         </a>
                     </div>
                     <div class="legal-links">

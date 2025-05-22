@@ -1,3 +1,6 @@
+
+
+
 function openOverlay(imageSrc) {
     const overlay = document.getElementById('imageOverlay');
     const image = document.getElementById('overlayImage');
@@ -57,3 +60,31 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target); // Optional: Stop observing once it has appeared
+        }
+    });
+}, {
+    threshold: 0.1
+});
+
+document.querySelectorAll('p').forEach(p => observer.observe(p));
+
+const observerFadein = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        } else {
+            entry.target.classList.remove('visible');
+        }
+    });
+}, {
+    threshold: 0.1
+});
+
+document.querySelectorAll('.fade-in-up').forEach(el => observerFadein.observe(el));
