@@ -8,7 +8,7 @@ function openOverlay(imageSrc) {
     image.src = imageSrc;
     overlay.style.display = 'flex';
     document.body.style.overflow = 'hidden'; // Prevent scrolling
-} 8
+}
 
 function closeOverlay() {
     const overlay = document.getElementById('imageOverlay');
