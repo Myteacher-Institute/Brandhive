@@ -41,29 +41,19 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-(function () {
-    // Get all navigation links
+document.addEventListener('DOMContentLoaded', function () {
+
+    // Navigation active state
     const navLinks = document.querySelectorAll('header nav a');
+    // Remove any default active class
+    navLinks.forEach(link => link.classList.remove('active'));
 
-    // Set Home as active by default
-    navLinks[0].classList.add('active');
-
-    // Add click event listeners to each link
     navLinks.forEach(link => {
         link.addEventListener('click', function (e) {
-            // Prevent default anchor behavior
-            e.preventDefault();
-
-            // Remove active class from all links
-            navLinks.forEach(navLink => {
-                navLink.classList.remove('active');
-            });
-
-            // Add active class to the clicked link
+            // Remove active from all
+            navLinks.forEach(navLink => navLink.classList.remove('active'));
+            // Add active to clicked
             this.classList.add('active');
-
-            // If you want to actually navigate to the page:
-            window.location.href = this.getAttribute('href');
         });
     });
-})();
+});
