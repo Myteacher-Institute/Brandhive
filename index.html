@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"> -->
-    <!-- <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png"> -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" href="styles/styles.css">
@@ -19,7 +19,7 @@
 <body>
     <header>
         <a href="#" class="logo"><img loading="lazy" src="./assets/images/brandhive-logo-removebg.png"
-                alt="Brandhive Logo"></a>
+                alt="Brandhive Logo" alt="Brandhive Logo"></a>
         <i class="fa-solid fa-bars" style="display: none;"></i>
         <nav>
             <a href="#brandhive-about">About Us</a>
@@ -34,7 +34,7 @@
         <!-- Hero sectiom -->
         <section class="hero">
             <div class="hero-text">
-                <h1>We offer high quality, budget friendly, digital solutions for businesses.</h1>
+                <h1>We offer high quality, budget friendly, digital <span>solutions</span> for businesses.</h1>
                 <a href="#">Get a quote</a>
             </div>
             <div class="hero-media">
@@ -42,7 +42,8 @@
                 <!-- <img src="./assets/images/hero-image.jpg" alt="Digital Solutions" class="placeholder-image"> -->
                 <!-- Video element (commented out until ready) -->
                 <video autoplay loop muted playsinline>
-                    <source src="./assets/videos/hero-video.mp4" type="video/mp4">
+                    <source src="./assets/videos/hero-video.mp4" type="video/mp4" alt="Brandhive Hero Video">
+                    Your browser does not support the video tag.
                 </video>
             </div>
         </section>
@@ -94,8 +95,22 @@
         </section>
 
         <!-- Why choose us -->
+        <section class="why-choose-us-section">
+            <div class="know-us-section-title">
+                <h1 class="know-us">Why choose us</h1>
+            </div>
+            <div>
+                <p class="why-choose-us-text">
+                    By choosing us, you gain a creative partner focused on delivering results, not just services. Our
+                    expert
+                    team combines design, strategy, and technology to build standout experiences. Expect clear
+                    communciation, timely delivery, and solutions built for growth.
+                </p>
+            </div>
+        </section>
+
         <section class="video-wrapper">
-            <video id="video" poster="./assets/images/why-choose-us.jpg" preload="metadata">
+            <video id="video" poster="./assets/images/why-choose-us.webp" preload="metadata">
                 <source src="./assets/videos/why-choose-us.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
@@ -152,17 +167,17 @@
             </div>
             <div class="portfolio-container">
                 <div class="portfolio-grid">
-                    <div class="portfolio-item" onclick="openOverlay('./assets/images/clients-acct-logo.png')">
-                        <img src="./assets/images/clients-acct-logo.png" alt="Clients Account">
+                    <div class="portfolio-item" onclick="openOverlay('./assets/images/clients-acct-logo.webp')">
+                        <img src="./assets/images/clients-acct-logo.webp" alt="Clients Account">
                     </div>
-                    <div class="portfolio-item" onclick="openOverlay('./assets/images/charides-logo.png')">
-                        <img src="./assets/images/charides-logo.png" alt="Charrides">
+                    <div class="portfolio-item" onclick="openOverlay('./assets/images/charides-logo.webp')">
+                        <img src="./assets/images/charides-logo.webp" alt="Charrides">
                     </div>
-                    <div class="portfolio-item" onclick="openOverlay('./assets/images/flyway-logo.png')">
-                        <img src="./assets/images/flyway-logo.png" alt="Flyway">
+                    <div class="portfolio-item" onclick="openOverlay('./assets/images/flyway-logo.webp')">
+                        <img src="./assets/images/flyway-logo.webp" alt="Flyway">
                     </div>
-                    <div class="portfolio-item" onclick="openOverlay('./assets/images/myteacher-logo.png')">
-                        <img src="./assets/images/myteacher-logo.png" alt="MyTeacher">
+                    <div class="portfolio-item" onclick="openOverlay('./assets/images/myteacher-logo.webp')">
+                        <img src="./assets/images/myteacher-logo.webp" alt="MyTeacher">
                     </div>
 
                     <div class="see-more-container">
@@ -181,62 +196,48 @@
                 </div>
         </section>
 
+        <!-- Contact Us -->
+        <section>
+            <div id="brandhive-contact" class="contact-row">
+                <a href="mailto:contact@brandhive.ng" class="contact-link">
+                    <i class="fa-solid fa-envelope fa-beat-fade"></i> contact@brandhive.ng
+                </a>
+                <a href="https://wa.me/23490300057489" class="contact-link">
+                    <i class="fa-brands fa-square-whatsapp fa-beat-fade"></i> 090300057489
+                </a>
+                <a href="tel:090300057489" class="contact-link">
+                    <i class="fa-solid fa-phone fa-beat-fade"></i> 090300057489
+                </a>
+            </div>
+        </section>
+
+        <!-- footer -->
         <footer class="footer">
             <div class="footer-container">
-                <!-- Logo -->
-                <div class="footer-logo">
-                    <a href="#" class="logo"><img src="./assets/images/brandhive-footer-logo-removebg.png"
-                            alt="Brandhive Logo"></a>
-                </div>
-
                 <!-- Tagline -->
                 <div class="footer-tagline">
-                    <h2>Let's help you scale your profit 10x your usual.</h2>
+                    <h2>Let's help you <span>scale</span> your <span>profit</span> 10x your usual.</h2>
                 </div>
 
                 <!-- Contact Form -->
-                <div class="footer-form">
-                    <div class="form-group">
-                        <input type="text" placeholder="Name" class="footer-input">
-                        <button class="footer-btn">Get quote</button>
-                    </div>
-                </div>
+                <form class="footer-form">
+                    <input type="text" placeholder="Name" class="footer-input">
+                    <button class="footer-btn" type="submit">Get quote</button>
+                </form>
 
-                <!-- Services and Contact Info -->
-                <div class="footer-info">
-                    <div class="footer-services">
-                        <h3>Our Services</h3>
-                        <ul>
-                            <li>UI/UX Design</li>
-                            <li>Video Production</li>
-                            <li>Digital Marketing</li>
-                            <li>Branding and Design</li>
-                            <li>Social Media Management</li>
-                            <li>Web and Mobile Development</li>
-                        </ul>
-                    </div>
+                <!-- Divider line -->
+                <div class="footer-divider"></div>
 
-                    <div class="footer-contact" id="brandhive-contact">
-                        <div class="contact-section">
-                            <h3>Call us</h3>
-                            <p>08153006465</p>
-                            <p>09030057489</p>
-                        </div>
-
-                        <div class="contact-section">
-                            <h3>Email</h3>
-                            <p>contact@brandhive.ng</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Social Media and Legal -->
+                <!-- Bottom Row: Social and Legal -->
                 <div class="footer-bottom">
                     <div class="social-links">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://facebook.com/brandhive" target="_blank" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        <a href="https://instagram.com/brandhive" target="_blank" aria-label="Instagram">
+                            <i class="fa-brands fa-square-instagram"></i>
+                        </a>
                     </div>
-
                     <div class="legal-links">
                         <a href="#">Terms & conditions</a>
                         <a href="#">Privacy Policy</a>
