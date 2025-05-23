@@ -4,10 +4,25 @@
 }
 
 /* MOBILE (768px and below) */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
 
     /* Mobile-specific styles here */
     /* .hero {} */
+
+    body {
+        height: 100vh;
+        display: grid;
+        text-align: center;
+        place-items: center;
+    }
+
+    main, header, footer {
+        display: none;
+    }
+
+    .coming-soon {
+        display: block;
+    }
 
 }
 

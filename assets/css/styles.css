@@ -680,10 +680,8 @@ header .chat:hover {
     background-color: #e8eddf;
 }
 
-
-
 /* Footer Styles */
-.footer {
+footer {
     padding: 0;
     width: 100vw;
     display: flex;
@@ -694,7 +692,7 @@ header .chat:hover {
     background: url('../images/brandhive-footer-background.webp') center/cover no-repeat;
 }
 
-.footer::before {
+footer::before {
     inset: 0;
     z-index: 0;
     content: '';
@@ -856,4 +854,8 @@ input {
 
 .legal-links a:hover {
     color: var(--primary-color);
+}
+
+.coming-soon {
+    display: none;
 }
