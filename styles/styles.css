@@ -54,6 +54,7 @@
 html {
     font-size: 100%;
     scroll-behavior: smooth;
+  scroll-padding-top: 86px;
 }
 
 body {
@@ -247,7 +248,7 @@ header .chat:hover {
 .know-us-section-title {
     width: 100%;
     padding: 2rem;
-    /* margin-top: 50px; */
+    margin-top: 40px;
     text-align: center;
     background-color: #FFFFFF;
 }
@@ -638,7 +639,7 @@ header .chat:hover {
 #brandhive-contact {
     width: 85%;
     padding-inline: 30px;
-    margin: auto 0 auto 60px;
+    margin: 0 auto 60px auto;
 }
 
 .contact-row {
@@ -652,8 +653,8 @@ header .chat:hover {
 .contact-link {
     gap: 12px;
     display: flex;
-    font-size: 2rem;
     font-weight: bold;
+    font-size: 1.5rem;
     align-items: center;
     letter-spacing: 0.5px;
     text-decoration: none;
@@ -662,9 +663,9 @@ header .chat:hover {
     font-family: var(--bold);
 }
 
-.contact-row a:nth-of-type(1) {
+/* .contact-row a:nth-of-type(1) {
     font-size: 1.5rem;
-}
+} */
 
 .brandhave-contact-icon i {
     z-index: 10;
@@ -759,20 +760,25 @@ header .chat:hover {
     font-size: 1.1rem;
     padding: 18px 20px;
     border-radius: 8px;
-    background: transparent;
-    color: var(--white-color);
     font-family: var(--regular);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: transparent;
+    border: 1px solid var(--white-color);
 }
 
 .footer-input::placeholder {
-    opacity: 0.7;
     color: var(--white-color);
+
 }
 
 .footer-input:focus {
     outline: none;
-    border: 1px solid var(--primary-color);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+}
+
+.footer-input:focus::placeholder {
+    opacity: 0.3;
+    color: var(--white-color);
 }
 
 .footer-btn {

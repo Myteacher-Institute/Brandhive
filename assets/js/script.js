@@ -59,7 +59,25 @@ document.addEventListener('DOMContentLoaded', function () {
             this.classList.add('active');
         });
     });
+
+    // Remove active when logo is clicked
+    const logo = document.querySelector('header .logo');
+    if (logo) {
+        logo.addEventListener('click', function () {
+            navLinks.forEach(navLink => navLink.classList.remove('active'));
+        });
+    }
+
+    // If you want to remove active when any other link (outside nav) is clicked, add similar logic:
+    // Example for WhatsApp chat link:
+    const chatLink = document.querySelector('header .chat');
+    if (chatLink) {
+        chatLink.addEventListener('click', function () {
+            navLinks.forEach(navLink => navLink.classList.remove('active'));
+        });
+    }
 });
+
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
