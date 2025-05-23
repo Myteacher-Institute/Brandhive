@@ -54,7 +54,7 @@
 html {
     font-size: 100%;
     scroll-behavior: smooth;
-  scroll-padding-top: 80px;
+    scroll-padding-top: 80px;
 }
 
 body {
