@@ -1,15 +1,22 @@
-
-
-
+// Overlay functionality for project images
 function openOverlay(imageSrc) {
     const overlay = document.getElementById('imageOverlay');
-    const image = document.getElementById('overlayImage');
+    let image = document.getElementById('overlayImage');
+
+    // Create image element if it doesn't exist yet
+    if (!image) {
+        image = document.createElement('img');
+        image.id = 'overlayImage';
+        const content = overlay.querySelector('.overlay-content');
+        if (content) content.appendChild(image);
+    }
 
     image.src = imageSrc;
     overlay.style.display = 'flex';
     document.body.style.overflow = 'hidden'; // Prevent scrolling
 }
 
+// Close overlay and restore scrolling
 function closeOverlay() {
     const overlay = document.getElementById('imageOverlay');
     overlay.style.display = 'none';
@@ -23,6 +30,7 @@ document.getElementById('imageOverlay').addEventListener('click', function (e) {
     }
 });
 
+// Video play/pause toggle for "Why choose us" section
 document.addEventListener('DOMContentLoaded', function () {
     const video = document.getElementById('video');
     const btn = document.getElementById('playPauseBtn');
@@ -43,42 +51,39 @@ document.addEventListener('DOMContentLoaded', function () {
     btn.addEventListener('click', togglePlayPause);
 });
 
-
+// Navigation active state management
 document.addEventListener('DOMContentLoaded', function () {
-
-    // Navigation active state
     const navLinks = document.querySelectorAll('header nav a');
-    // Remove any default active class
-    navLinks.forEach(link => link.classList.remove('active'));
+    const logo = document.querySelector('header .logo');
+    const chatLink = document.querySelector('header .chat');
 
+    // Utility: Remove 'active' class from all nav links
+    function clearNavActive() {
+        navLinks.forEach(link => link.classList.remove('active'));
+    }
+
+    // Remove any default active class on page load
+    clearNavActive();
+
+    // Add 'active' to clicked nav link, remove from others
     navLinks.forEach(link => {
-        link.addEventListener('click', function (e) {
-            // Remove active from all
-            navLinks.forEach(navLink => navLink.classList.remove('active'));
-            // Add active to clicked
+        link.addEventListener('click', function () {
+            clearNavActive();
             this.classList.add('active');
         });
     });
 
-    // Remove active when logo is clicked
-    const logo = document.querySelector('header .logo');
-    if (logo) {
-        logo.addEventListener('click', function () {
-            navLinks.forEach(navLink => navLink.classList.remove('active'));
-        });
-    }
+    // Remove 'active' from nav links when logo or chat link is clicked
+    [logo, chatLink].forEach(el => {
+        if (el) {
+            el.addEventListener('click', clearNavActive);
+        }
+    });
 
-    // If you want to remove active when any other link (outside nav) is clicked, add similar logic:
-    // Example for WhatsApp chat link:
-    const chatLink = document.querySelector('header .chat');
-    if (chatLink) {
-        chatLink.addEventListener('click', function () {
-            navLinks.forEach(navLink => navLink.classList.remove('active'));
-        });
-    }
+    // If you want to add more links that clear nav active, add them to the array above
 });
 
-
+// Intersection Observer for revealing elements on scroll (paragraphs)
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -90,8 +95,10 @@ const observer = new IntersectionObserver((entries) => {
     threshold: 0.1
 });
 
+// Observe all <p> elements for fade-in effect
 document.querySelectorAll('p').forEach(p => observer.observe(p));
 
+// Intersection Observer for fade-in-up animation
 const observerFadein = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -103,4 +110,5 @@ const observerFadein = new IntersectionObserver((entries) => {
     threshold: 0.1
 });
 
+// Observe all elements with .fade-in-up class
 document.querySelectorAll('.fade-in-up').forEach(el => observerFadein.observe(el));

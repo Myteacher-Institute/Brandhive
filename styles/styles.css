@@ -54,7 +54,6 @@
 html {
     font-size: 100%;
     scroll-behavior: smooth;
-    scroll-padding-top: 80px;
 }
 
 body {
@@ -63,6 +62,12 @@ body {
     font-family: var(--regular);
     background-color: var(--white-color);
 }
+
+section {
+    scroll-margin-top: 40px;
+}
+
+
 
 /* 1. Fade In Up */
 .fade-in-up {
@@ -222,18 +227,14 @@ header .chat:hover {
 
 .hero-media {
     width: 100%;
-    height: 950px;
+    height: 80%;
     overflow: hidden;
-    position: relative;
     border-radius: 16px;
 }
 
 .hero-media video {
-    inset: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    position: absolute;
 }
 
 /*  Who we are section styling */
@@ -639,7 +640,8 @@ header .chat:hover {
 #brandhive-contact {
     width: 85%;
     padding-inline: 30px;
-    margin: 0 auto 60px auto;
+    scroll-margin-top: 90px;
+    margin: 0 auto 50px auto;
 }
 
 .contact-row {
@@ -754,30 +756,33 @@ header .chat:hover {
     justify-content: center;
 }
 
+input {
+    color: var(--white-color);
+}
+
 .footer-input {
     flex: 1;
     width: 600px;
+    outline: none;
     font-size: 1.1rem;
     padding: 18px 20px;
     border-radius: 8px;
     font-family: var(--regular);
     background-color: transparent;
-    border: 1px solid var(--white-color);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .footer-input::placeholder {
-    color: var(--white-color);
+    color: rgba(255, 255, 255, 0.3);
 
 }
 
 .footer-input:focus {
-    outline: none;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid var(--white-color);
 
 }
 
 .footer-input:focus::placeholder {
-    opacity: 0.3;
     color: var(--white-color);
 }
 
