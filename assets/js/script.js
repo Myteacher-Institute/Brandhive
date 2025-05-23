@@ -1,7 +1,7 @@
 // Overlay functionality for project images
-function openOverlay(imageSrc) {
-    const overlay = document.getElementById('imageOverlay');
+const openOverlay = (imageSrc) => {
     let image = document.getElementById('overlayImage');
+    const overlay = document.getElementById('imageOverlay');
 
     // Create image element if it doesn't exist yet
     if (!image) {
@@ -17,26 +17,24 @@ function openOverlay(imageSrc) {
 }
 
 // Close overlay and restore scrolling
-function closeOverlay() {
+const closeOverlay = () => {
     const overlay = document.getElementById('imageOverlay');
     overlay.style.display = 'none';
     document.body.style.overflow = 'auto'; // Enable scrolling again
 }
 
 // Close overlay when clicking outside the image
-document.getElementById('imageOverlay').addEventListener('click', function (e) {
-    if (e.target === this) {
-        closeOverlay();
-    }
+document.getElementById('imageOverlay').addEventListener('click', e => {
+    if (e.target === this) { closeOverlay() }
 });
 
 // Video play/pause toggle for "Why choose us" section
 document.addEventListener('DOMContentLoaded', function () {
-    const video = document.getElementById('video');
     const btn = document.getElementById('playPauseBtn');
+    const video = document.getElementById('video');
     const icon = btn.querySelector('i');
 
-    function togglePlayPause() {
+    const togglePlayPause = () => {
         if (video.paused) {
             video.play();
             icon.classList.remove('fa-play');
@@ -52,22 +50,20 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // Navigation active state management
-document.addEventListener('DOMContentLoaded', function () {
-    const navLinks = document.querySelectorAll('header nav a');
+document.addEventListener('DOMContentLoaded', () => {
     const logo = document.querySelector('header .logo');
     const chatLink = document.querySelector('header .chat');
+    const navLinks = document.querySelectorAll('header nav a');
 
     // Utility: Remove 'active' class from all nav links
-    function clearNavActive() {
-        navLinks.forEach(link => link.classList.remove('active'));
-    }
+    const clearNavActive = () => navLinks.forEach(link => link.classList.remove('active'));
 
     // Remove any default active class on page load
     clearNavActive();
 
     // Add 'active' to clicked nav link, remove from others
     navLinks.forEach(link => {
-        link.addEventListener('click', function () {
+        link.addEventListener('click', () => {
             clearNavActive();
             this.classList.add('active');
         });
@@ -75,9 +71,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Remove 'active' from nav links when logo or chat link is clicked
     [logo, chatLink].forEach(el => {
-        if (el) {
-            el.addEventListener('click', clearNavActive);
-        }
+        if (el) { el.addEventListener('click', clearNavActive) }
     });
 
     // If you want to add more links that clear nav active, add them to the array above
@@ -99,11 +93,11 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('p').forEach(p => observer.observe(p));
 
 // Intersection Observer for fade-in-up animation
-const observerFadein = new IntersectionObserver((entries) => {
+const observerFadeIn = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('visible');
-            observerFadein.unobserve(entry.target); // Stop observing after first reveal
+            observerFadeIn.unobserve(entry.target); // Stop observing after first reveal
         }
     });
 }, {
@@ -111,4 +105,4 @@ const observerFadein = new IntersectionObserver((entries) => {
 });
 
 // Observe all elements with .fade-in-up class
-document.querySelectorAll('.fade-in-up').forEach(el => observerFadein.observe(el));
+document.querySelectorAll('.fade-in-up').forEach(el => observerFadeIn.observe(el));
