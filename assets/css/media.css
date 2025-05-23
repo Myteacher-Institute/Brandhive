@@ -1,35 +1,25 @@
 /* TABLET (1024px and below) */
 @media (max-width: 1024px) {
-  /* Tablet-specific styles here */
+    /* Tablet-specific styles here */
 }
 
 /* MOBILE (768px and below) */
 @media (max-width: 768px) {
-  /* Mobile-specific styles here */
-  .hero {
-    
-  }
+
+    /* Mobile-specific styles here */
+    /* .hero {} */
 
 }
 
 /* PORTRAIT ORIENTATION */
 @media (orientation: portrait) {
-  /* Styles for portrait mode */
+    /* Styles for portrait mode */
 }
 
 /* LANDSCAPE ORIENTATION */
 @media (orientation: landscape) {
-  /* Styles for landscape mode */
+    /* Styles for landscape mode */
 }
-
-
-
-
-
-
-
-
-
 
 /* 
 @media screen and (max-width: 992px) {
