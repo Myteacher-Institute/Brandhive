@@ -61,12 +61,11 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('visible');
-            observer.unobserve(entry.target); // Optional: Stop observing once it has appeared
+            observer.unobserve(entry.target); // Stop observing after first reveal
         }
     });
 }, {
@@ -79,8 +78,7 @@ const observerFadein = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('visible');
-        } else {
-            entry.target.classList.remove('visible');
+            observerFadein.unobserve(entry.target); // Stop observing after first reveal
         }
     });
 }, {
