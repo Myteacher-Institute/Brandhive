@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
             clearNavActive();
-            this.classList.add('active');
+            link.classList.add('active'); // Use the link parameter
         });
     });
 
@@ -104,5 +104,5 @@ const observerFadeIn = new IntersectionObserver((entries) => {
     threshold: 0.1
 });
 
-// Observe all elements with .fade-in-up class
-document.querySelectorAll('.fade-in-up').forEach(el => observerFadeIn.observe(el));
+// Observe all section .title h1, hero .hero-text h1 and .footer-tagline h2 elements for fade-in effect
+document.querySelectorAll('section .title h1, .hero .hero-text h1, .footer-tagline h2').forEach(el => observerFadeIn.observe(el));
