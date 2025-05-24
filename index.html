@@ -172,16 +172,16 @@
             </div>
             <div class="portfolio-container">
                 <div class="portfolio-grid">
-                    <div class="portfolio-item" onclick="openOverlay('assets/images/clientsAcct.webp')">
+                    <div class="portfolio-item" onclick="ImageOverlay.open('assets/images/clientsAcct.webp')">
                         <img src="assets/images/clientsAcct.webp" alt="Clients Account">
                     </div>
-                    <div class="portfolio-item" onclick="openOverlay('assets/images/charrides.webp')">
+                    <div class="portfolio-item" onclick="ImageOverlay.open('assets/images/charrides.webp')">
                         <img src="assets/images/charrides.webp" alt="Charrides">
                     </div>
-                    <div class="portfolio-item" onclick="openOverlay('assets/images/flyway.webp')">
+                    <div class="portfolio-item" onclick="ImageOverlay.open('assets/images/flyway.webp')">
                         <img src="assets/images/flyway.webp" alt="Flyway">
                     </div>
-                    <div class="portfolio-item" onclick="openOverlay('assets/images/myteacher.webp')">
+                    <div class="portfolio-item" onclick="ImageOverlay.open('assets/images/myteacher.webp')">
                         <img src="assets/images/myteacher.webp" alt="MyTeacher">
                     </div>
 
@@ -192,7 +192,7 @@
                 <!-- Overlay -->
                 <div class="overlay" id="imageOverlay">
                     <div class="overlay-content">
-                        <div class="close-btn" onclick="closeOverlay()">
+                        <div class="close-btn" onclick="ImageOverlay.close()">
                             <i class="fas fa-times"></i>
                         </div>
                         <img id="overlayImage" src="" alt="Enlarged image">
@@ -204,13 +204,13 @@
         <section id="contact">
             <div class="contact-row">
                 <a href="mailto:contact@brandhive.ng" aria-label="Email" class="contact-link">
-                    <div class="brandhive-contact-icon"><i class="fa-solid fa-envelope"></i></div>contact@brandhive.ng
+                    <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>contact@brandhive.ng
                 </a>
                 <a href="https://wa.me/2348153006465" aria-label="WhatsApp" target="_blank" class="contact-link">
-                    <div class="brandhive-contact-icon"><i class="fa-brands fa-whatsapp"></i></div>+2348153006465
+                    <div class="contact-icon"><i class="fa-brands fa-whatsapp"></i></div>+2348153006465
                 </a>
                 <a href="tel:+2348153006465" aria-label="Tel" class="contact-link">
-                    <div class="brandhive-contact-icon"><i class="fa-solid fa-phone"></i></div>+2348153006465
+                    <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>+2348153006465
                 </a>
             </div>
         </section>

@@ -56,8 +56,9 @@
 }
 
 body {
-    overflow-x: hidden;
+    width: 100%;
     font-family: var(--regular);
+    overflow: hidden auto !important;
     background-color: var(--white-color);
 }
 
@@ -430,6 +431,7 @@ header .chat:hover {
 .partners-carousel {
     width: 100%;
     padding: 40px 0;
+    /* overflow: hidden; */
     position: relative;
 }
 
@@ -535,8 +537,7 @@ header .chat:hover {
     display: none;
     z-index: 1000;
     position: fixed;
-    align-items: center;
-    justify-content: center;
+    place-items: center;
     background-color: rgba(0, 0, 0, 0.85);
 }
 
@@ -596,12 +597,12 @@ header .chat:hover {
     font-family: var(--bold);
 }
 
-.brandhive-contact-icon i {
+.contact-icon i {
     z-index: 10;
     cursor: pointer;
 }
 
-.brandhive-contact-icon {
+.contact-icon {
     width: 50px;
     height: 50px;
     display: flex;
