@@ -776,7 +776,3 @@ input {
 .legal-links a:hover {
     color: var(--primary-color);
 }
-
-.coming-soon {
-    display: none;
-}

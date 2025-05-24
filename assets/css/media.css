@@ -9,21 +9,6 @@
     /* Mobile-specific styles here */
     /* .hero {} */
 
-    body {
-        height: 100vh;
-        display: grid;
-        text-align: center;
-        place-items: center;
-    }
-
-    main, header, footer {
-        display: none;
-    }
-
-    .coming-soon {
-        display: block;
-    }
-
 }
 
 /* PORTRAIT ORIENTATION */
