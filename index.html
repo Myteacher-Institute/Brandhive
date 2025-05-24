@@ -4,47 +4,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="description"
+        content="Brandhive - High-quality, budget-friendly digital solutions for businesses. We specialize in branding, web development, SEO, and social media management.">
+    <meta name="keywords"
+        content="digital agency, branding, web development, SEO, social media management, UI/UX design">
+    <meta name="author" content="Brandhive">
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://brandhive.ng">
+
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="assets/videos/hero.mp4" as="video" type="video/mp4">
+    <link rel="preload" href="assets/images/logo.webp" as="image" type="image/webp">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+
+    <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
     <link rel="manifest" href="assets/favicons/site.webmanifest">
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="assets/css/media.css">
-    <title>Brandhive</title>
+    <link rel="icon" href="assets/favicons/favicon.ico">
+
+    <!-- Font Awesome (load asynchronously) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    </noscript>
+
+    <!-- CSS (load styles.css as critical, defer media.css) -->
+    <link rel="stylesheet" href="assets/css/styles.css" media="all">
+    <link rel="stylesheet" href="assets/css/media.css" media="print" onload="this.media='all'">
+
+    <title>Brandhive | Digital Solutions for Businesses</title>
 </head>
 
 <body>
     <!-- Header -->
     <header>
-        <a href="#" class="logo"><img src="assets/images/logo.webp" alt="Brandhive Logo"></a>
-        <i class="fa-solid fa-bars" style="display: none;"></i>
-        <nav>
+        <a href="#" class="logo" aria-label="Brandhive Home">
+            <img src="assets/images/logo.webp" alt="Brandhive Logo" width="65" height="50" loading="eager">
+        </a>
+        <button class="mobile-menu-toggle" aria-label="Toggle Menu" style="display: none;">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav aria-label="Main Navigation">
             <a href="#about">About Us</a>
             <a href="#services">Our Services</a>
             <a href="#projects">Our Projects</a>
             <a href="#contact">Contact Us</a>
         </nav>
-        <a href="https://wa.me/2348153006465" target="_blank" class="chat">Chat on WhatsApp</a>
+        <a href="https://wa.me/2348153006465" target="_blank" class="chat" rel="noopener">Chat on WhatsApp</a>
     </header>
 
-    <!-- Main -->
+    <!-- Main Content -->
     <main>
-        <!-- Hero section -->
+        <!-- Hero Section -->
         <section class="hero">
             <div class="hero-text">
                 <h1>We offer <span>high</span> quality, <span>budget</span> friendly,
-                    <span>digital</span>
-                    solutions for
-                    businesses.
+                    <span>digital</span> solutions for businesses.
                 </h1>
-                <a href="#">Get a quote</a>
+                <a href="#contact" class="cta-button">Get a quote</a>
             </div>
             <div class="hero-media">
-                <video autoplay loop muted playsinline disablePictureInPicture>
-                    <source src="assets/videos/hero.mp4" type="video/mp4" alt="Brandhive Hero Video">
+                <video autoplay loop muted playsinline disablePictureInPicture aria-label="Brandhive Digital Solutions">
+                    <source src="assets/videos/hero.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
@@ -56,14 +82,12 @@
                 <h1>Who we are</h1>
             </div>
             <div class="know-us-content">
-                <img src="assets/images/about.webp" alt="Who we are" loading="lazy">
+                <img src="assets/images/about.webp" alt="Brandhive Team" loading="lazy" width="auto" height="445">
                 <div class="content-wrapper">
-                    <p>
-                        Brandhive is a digital solution agency specifically for businesses
-                        across the globe,<br> to help scale profit 10x than usual... meeting your goals,
-                        by giving you <br>high quality, budget-friendly digital solutions.
-                    </p>
-                    <a href="#">See more</a>
+                    <p>Brandhive is a digital solution agency specifically for businesses across the globe, <br>
+                        to help scale profit 10x than usual... meeting your goals, by giving you <br>
+                        high quality, budget-friendly digital solutions.</p>
+                    <a href="#services" class="learn-more">See more</a>
                 </div>
             </div>
         </section>
@@ -74,34 +98,34 @@
                 <h1>Our Services</h1>
             </div>
             <div class="services-container">
-                <div class="service-card branding">
-                    <img src="assets/images/branding.webp" alt="Branding & Design" loading="lazy">
-                    <h2 class="service-title">Branding <br>&amp; Design</h2>
-                </div>
-                <div class="service-card marketing">
-                    <img src="assets/images/digital.webp" alt="SEO & Digital Marketing" loading="lazy">
-                    <h2 class="service-title">SEO &amp; Digital<br> Marketing</h2>
-                </div>
-                <div class="service-card social">
-                    <img src="assets/images/social.webp" alt="Social Media Management" loading="lazy">
-                    <h2 class="service-title">Social Media<br> Management</h2>
-                </div>
-                <div class="service-card uiux">
-                    <img src="assets/images/uiux.webp" alt="UI/UX Design" loading="lazy">
+                <article class="service-card branding" aria-label="Branding & Design">
+                    <img src="assets/images/branding.webp" alt="Branding & Design" loading="lazy" width="auto" height="200">
+                    <h2 class="service-title">Branding <br> &amp; Design</h2>
+                </article>
+                <article class="service-card marketing" aria-label="SEO & Digital Marketing">
+                    <img src="assets/images/digital.webp" alt="SEO & Digital Marketing" loading="lazy" width="auto" height="200">
+                    <h2 class="service-title">SEO &amp; Digital <br> Marketing</h2>
+                </article>
+                <article class="service-card social" aria-label="Social Media Management">
+                    <img src="assets/images/social.webp" alt="Social Media Management" loading="lazy" width="auto" height="200">
+                    <h2 class="service-title">Social Media <br> Management</h2>
+                </article>
+                <article class="service-card uiux" aria-label="UI/UX Design">
+                    <img src="assets/images/uiux.webp" alt="UI/UX Design" loading="lazy" width="auto" height="200">
                     <h2 class="service-title">UI/UX <br> Design</h2>
-                </div>
-                <div class="service-card video">
-                    <img src="assets/images/video.webp" alt="Video Production" loading="lazy">
-                    <h2 class="service-title">Media &amp; Video<br> Production</h2>
-                </div>
-                <div class="service-card webdev">
-                    <img src="assets/images/web.webp" alt="Web & App Development" loading="lazy">
-                    <h2 class="service-title">Web &amp; App<br> Development</h2>
-                </div>
+                </article>
+                <article class="service-card video" aria-label="Media & Video Production">
+                    <img src="assets/images/video.webp" alt="Media & Video Production" loading="lazy" width="auto" height="200">
+                    <h2 class="service-title">Media &amp; Video <br> Production</h2>
+                </article>
+                <article class="service-card webdev" aria-label="Web & App Development">
+                    <img src="assets/images/web.webp" alt="Web & App Development" loading="lazy" width="auto" height="200">
+                    <h2 class="service-title">Web &amp; App <br> Development</h2>
+                </article>
             </div>
         </section>
 
-        <!-- Why choose us -->
+        <!-- Why Choose Us -->
         <section>
             <div class="title">
                 <h1>Why choose us</h1>
@@ -109,54 +133,53 @@
             <div>
                 <p class="why-choose-us-text">
                     By choosing us, you gain a creative partner focused on delivering results, not just services. Our
-                    expert
-                    team combines design, strategy, and technology to build standout experiences. Expect clear
+                    expert team combines design, strategy, and technology to build standout experiences. Expect clear
                     communication, timely delivery, and solutions built for growth.
                 </p>
             </div>
             <div class="video-wrapper">
-                <video id="video" poster="assets/images/choose.webp" preload="metadata" loading="lazy">
+                <video id="video" poster="assets/images/choose.webp" preload="metadata" loading="lazy"
+                    aria-label="Why Choose Brandhive">
                     <source src="assets/videos/choose.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <div id="playPauseBtn" class="play-pause-btn">
+                <button id="playPauseBtn" class="play-pause-btn" aria-label="Play/Pause Video">
                     <i class="fas fa-play"></i>
-                </div>
+                </button>
             </div>
         </section>
 
-        <!-- Clients section -->
+        <!-- Clients Section -->
         <section>
             <div class="title">
                 <h1>Our Clients</h1>
             </div>
-            <div class="partners-carousel">
+            <div class="partners-carousel" aria-live="polite">
                 <div class="carousel-track">
-                    <!-- Original slides -->
                     <div class="carousel-slide">
-                        <img src="assets/images/logos/myteacher.webp" alt="Myteacher Logo">
+                        <img src="assets/images/logos/myteacher.webp" alt="Myteacher Logo" loading="lazy" width="auto" height="auto">
                     </div>
                     <div class="carousel-slide">
-                        <img src="assets/images/logos/charrides.webp" alt="Charrides Logo">
+                        <img src="assets/images/logos/charrides.webp" alt="Charrides Logo" loading="lazy" width="auto" height="auto">
                     </div>
                     <div class="carousel-slide">
-                        <img src="assets/images/logos/flyway.webp" alt="Flyway Logo">
+                        <img src="assets/images/logos/flyway.webp" alt="Flyway Logo" loading="lazy" width="auto" height="auto">
                     </div>
                     <div class="carousel-slide">
-                        <img src="assets/images/logos/clientsAcct.webp" alt="Clients Account Logo">
+                        <img src="assets/images/logos/clientsAcct.webp" alt="Clients Account Logo" loading="lazy" width="auto" height="auto">
                     </div>
-                    <!-- Duplicate slides for seamless looping -->
-                    <div class="carousel-slide">
-                        <img src="assets/images/logos/myteacher.webp" alt="Myteacher Logo">
+                    <!-- Duplicates for looping (hidden from screen readers) -->
+                    <div class="carousel-slide" aria-hidden="true">
+                        <img src="assets/images/logos/myteacher.webp" alt="" loading="lazy">
                     </div>
-                    <div class="carousel-slide">
-                        <img src="assets/images/logos/charrides.webp" alt="Charrides Logo">
+                    <div class="carousel-slide" aria-hidden="true">
+                        <img src="assets/images/logos/charrides.webp" alt="" loading="lazy">
                     </div>
-                    <div class="carousel-slide">
-                        <img src="assets/images/logos/flyway.webp" alt="Flyway Logo">
+                    <div class="carousel-slide" aria-hidden="true">
+                        <img src="assets/images/logos/flyway.webp" alt="" loading="lazy">
                     </div>
-                    <div class="carousel-slide">
-                        <img src="assets/images/logos/clientsAcct.webp" alt="Clients Account Logo">
+                    <div class="carousel-slide" aria-hidden="true">
+                        <img src="assets/images/logos/clientsAcct.webp" alt="" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -165,36 +188,36 @@
         <!-- Our Projects -->
         <section id="projects">
             <div class="title">
-                <h1>Recent Projects </h1>
+                <h1>Recent Projects</h1>
             </div>
             <div class="portfolio-container">
                 <div class="portfolio-grid">
-                    <div class="portfolio-item" onclick="ImageOverlay.open('assets/images/clientsAcct.webp')">
-                        <img src="assets/images/clientsAcct.webp" alt="Clients Account">
-                    </div>
-                    <div class="portfolio-item" onclick="ImageOverlay.open('assets/images/charrides.webp')">
-                        <img src="assets/images/charrides.webp" alt="Charrides">
-                    </div>
-                    <div class="portfolio-item" onclick="ImageOverlay.open('assets/images/flyway.webp')">
-                        <img src="assets/images/flyway.webp" alt="Flyway">
-                    </div>
-                    <div class="portfolio-item" onclick="ImageOverlay.open('assets/images/myteacher.webp')">
-                        <img src="assets/images/myteacher.webp" alt="MyTeacher">
-                    </div>
-
+                    <figure class="portfolio-item" onclick="ImageOverlay.open('assets/images/clientsAcct.webp')">
+                        <img src="assets/images/clientsAcct.webp" alt="Clients Account Project" loading="lazy" width="auto" height="300">
+                    </figure>
+                    <figure class="portfolio-item" onclick="ImageOverlay.open('assets/images/charrides.webp')">
+                        <img src="assets/images/charrides.webp" alt="Charrides Project" loading="lazy" width="auto" height="300">
+                    </figure>
+                    <figure class="portfolio-item" onclick="ImageOverlay.open('assets/images/flyway.webp')">
+                        <img src="assets/images/flyway.webp" alt="Flyway Project" loading="lazy" width="auto" height="300">
+                    </figure>
+                    <figure class="portfolio-item" onclick="ImageOverlay.open('assets/images/myteacher.webp')">
+                        <img src="assets/images/myteacher.webp" alt="MyTeacher Project" loading="lazy" width="auto" height="300">
+                    </figure>
                     <div class="see-more-container">
                         <button class="see-more-btn">See more</button>
                     </div>
                 </div>
                 <!-- Overlay -->
-                <div class="overlay" id="imageOverlay">
+                <div class="overlay" id="imageOverlay" role="dialog" aria-modal="true" aria-hidden="true">
                     <div class="overlay-content">
-                        <div class="close-btn" onclick="ImageOverlay.close()">
+                        <button class="close-btn" onclick="ImageOverlay.close()" aria-label="Close">
                             <i class="fas fa-times"></i>
-                        </div>
-                        <img id="overlayImage" src="" alt="Enlarged image">
+                        </button>
+                        <img id="overlayImage" src="" alt="Enlarged project image">
                     </div>
                 </div>
+            </div>
         </section>
 
         <!-- Contact Us -->
@@ -203,10 +226,11 @@
                 <a href="mailto:contact@brandhive.ng" aria-label="Email" class="contact-link">
                     <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>contact@brandhive.ng
                 </a>
-                <a href="https://wa.me/2348153006465" aria-label="WhatsApp" target="_blank" class="contact-link">
+                <a href="https://wa.me/2348153006465" aria-label="WhatsApp" target="_blank" rel="noopener"
+                    class="contact-link">
                     <div class="contact-icon"><i class="fa-brands fa-whatsapp"></i></div>+2348153006465
                 </a>
-                <a href="tel:+2348153006465" aria-label="Tel" class="contact-link">
+                <a href="tel:+2348153006465" aria-label="Call" class="contact-link">
                     <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>+2348153006465
                 </a>
             </div>
@@ -216,25 +240,22 @@
     <!-- Footer -->
     <footer>
         <div class="footer-container">
-            <!-- Tagline -->
             <div class="footer-tagline">
                 <h2>Let's help you <span>scale</span> your <span>profit</span> 10x your usual.</h2>
             </div>
-            <!-- Contact Form -->
-            <form class="footer-form">
-                <input type="text" placeholder="Name" class="footer-input">
+            <form class="footer-form" aria-label="Contact Form">
+                <input type="text" placeholder="Name" class="footer-input" aria-label="Your Name">
                 <button class="footer-btn" type="submit">Get a quote</button>
             </form>
-            <!-- Divider line -->
             <div class="footer-divider"></div>
-            <!-- Bottom Row: Social and Legal -->
             <div class="footer-bottom">
                 <div class="social-links">
-                    <a href="https://web.facebook.com/profile.php?id=61566613907364" target="_blank"
+                    <a href="https://web.facebook.com/profile.php?id=61566613907364" target="_blank" rel="noopener"
                         aria-label="Facebook">
                         <i class="fa-brands fa-facebook"></i>
                     </a>
-                    <a href="https://www.instagram.com/brandhiveconcepts/" target="_blank" aria-label="Instagram">
+                    <a href="https://www.instagram.com/brandhiveconcepts/" target="_blank" rel="noopener"
+                        aria-label="Instagram">
                         <i class="fa-brands fa-instagram"></i>
                     </a>
                 </div>
@@ -246,7 +267,8 @@
         </div>
     </footer>
 
-    <script src="assets/js/script.js"></script>
+    <!-- Deferred JavaScript -->
+    <script src="assets/js/script.js" defer></script>
 </body>
 
 </html>

@@ -1,15 +1,4 @@
-* {
-    margin: 0;
-    padding: 0;
-    border: none;
-    font-size: 100%;
-    list-style: none;
-    text-decoration: none;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-    scroll-padding-top: 40px;
-}
-
+/* Critical CSS (Above-the-fold) */
 :root {
     --text-color: #0D0D0D;
     --black-color: #000000;
@@ -24,35 +13,59 @@
     --regular: 'Gilroy-Regular', sans-serif;
 }
 
-/* === Import Gilroy Fonts === */
+/* Font Face */
 @font-face {
     font-family: 'Gilroy-Bold';
     src: url('../fonts/Gilroy-Bold.ttf') format('truetype');
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Gilroy-Heavy';
     src: url('../fonts/Gilroy-Heavy.ttf') format('truetype');
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Gilroy-Light';
     src: url('../fonts/Gilroy-Light.ttf') format('truetype');
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Gilroy-Medium';
     src: url('../fonts/Gilroy-Medium.ttf') format('truetype');
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Gilroy-Regular';
     src: url('../fonts/Gilroy-Regular.ttf') format('truetype');
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Belgan-Aesthetic';
     src: url('../fonts/Belgan-Aesthetic.ttf') format('truetype');
+    font-display: swap;
+}
+
+/* Base Reset */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    border: none;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 40px;
 }
 
 body {
@@ -321,6 +334,7 @@ header .chat:hover {
     position: relative;
     align-items: center;
     border-radius: 16px;
+    will-change: transform;
     justify-content: center;
     transition: all 0.3s ease;
 }
@@ -383,6 +397,7 @@ header .chat:hover {
     font-size: 50px;
     position: absolute;
     border-radius: 50%;
+    background: transparent;
     color: var(--white-color);
     transform: translate(-50%, -50%);
     /* background-color: rgba(0, 0, 0, 0.6); */
@@ -498,6 +513,7 @@ header .chat:hover {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    will-change: transform;
     transition: transform 0.3s ease;
 }
 
