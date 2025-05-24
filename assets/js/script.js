@@ -69,18 +69,14 @@ class ImageOverlay {
     }
 
     static init() {
-        this.#overlay?.addEventListener('click', (e) =>
-            e.target === this.#overlay && this.close()
-        );
+        this.#overlay?.addEventListener('click', (e) => e.target === this.#overlay && this.close());
     }
 }
 
 // Initialize everything (keep all your existing code below)
 document.addEventListener('DOMContentLoaded', () => {
-    ImageOverlay.init();  // Initialize the new overlay
-
-    // Keep all your existing initialization code exactly as is
     initNav();
     initVideo();
     initObservers();
+    ImageOverlay.init();
 });
