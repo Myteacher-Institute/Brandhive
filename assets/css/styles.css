@@ -448,17 +448,12 @@ header .chat:hover {
 }
 
 /* Partners Carousel Styles */
-.partners-carousel-container {
+.partners-carousel {
     width: 100%;
     margin: 0 auto;
     padding: 40px 0;
     overflow: hidden;
     position: relative;
-}
-
-.partners-carousel {
-    width: 100%;
-    overflow: hidden;
 }
 
 .carousel-track {
