@@ -73,7 +73,7 @@ class ImageOverlay {
     }
 }
 
-// Initialize everything (keep all your existing code below)
+// Initialize everything
 document.addEventListener('DOMContentLoaded', () => {
     initNav();
     initVideo();

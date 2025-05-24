@@ -57,6 +57,7 @@
 
 body {
     width: 100%;
+    font-display: swap;
     font-family: var(--regular);
     overflow: hidden auto !important;
     background-color: var(--white-color);
@@ -618,7 +619,7 @@ footer {
     width: 100vw;
     position: relative;
     color: var(--white-color);
-    background: url('../images/brandhive-footer-background.webp') center/cover no-repeat;
+    background: url('../images/footer.webp') center/cover no-repeat;
 }
 
 footer::before {
