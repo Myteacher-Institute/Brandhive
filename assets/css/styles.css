@@ -67,7 +67,7 @@ section {
 
 section .title {
     width: 100%;
-    padding: 2rem;
+    padding: 2.5rem;
     margin-top: 40px;
     text-align: center;
     background-color: #FFFFFF;
@@ -109,9 +109,9 @@ header {
     display: flex;
     margin: 0 auto;
     position: sticky;
+    padding-block: 1rem;
     inset: 0 auto auto 0;
     align-items: flex-end;
-    padding-block: 1rem;
     justify-content: space-between;
     background-color: var(--white-color);
 }
@@ -253,50 +253,49 @@ header .chat:hover {
 }
 
 .know-us-content {
-    position: relative;
     width: 100%;
-    min-height: 60vh;
-    overflow: hidden;
     display: flex;
+    overflow: hidden;
+    min-height: 60vh;
+    position: relative;
+    text-align: center;
     align-items: center;
     justify-content: center;
-    text-align: center;
 }
 
 /* Dark overlay */
 .know-us-content::before {
-    content: '';
-    position: absolute;
     inset: 0;
     z-index: 1;
-    background-color: rgba(0, 0, 0, 0.2);
+    content: '';
+    position: absolute;
     pointer-events: none;
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 .know-us-content img {
-    position: absolute;
-    top: 0;
-    left: 0;
+    inset: 0;
+    z-index: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: 0;
+    position: absolute;
     pointer-events: none;
 }
 
 .content-wrapper {
-    position: relative;
-    z-index: 2;
     width: 80%;
+    z-index: 2;
     max-width: 800px;
+    position: relative;
     color: var(--white-color);
     font-family: var(--light);
 }
 
 .content-wrapper p {
     line-height: 1.5;
-    text-align: center;
     font-size: 1.25rem;
+    text-align: center;
     margin-bottom: 40px;
 }
 
@@ -335,13 +334,13 @@ header .chat:hover {
 
 .service-card {
     width: 100%;
-    height: 210px;
+    height: 200px;
     display: flex;
     cursor: pointer;
     overflow: hidden;
     position: relative;
     align-items: center;
-    border-radius: 15px;
+    border-radius: 16px;
     justify-content: center;
     transition: all 0.3s ease;
 }
@@ -788,8 +787,8 @@ input {
     width: 100%;
     height: 2px;
     opacity: 0.7;
-    margin: 40px 0 30px 0;
     background: none;
+    margin: 40px 0 30px 0;
     border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
 
@@ -803,8 +802,8 @@ input {
 }
 
 .social-links {
-    display: flex;
     gap: 20px;
+    display: flex;
 }
 
 .social-links a {
@@ -817,22 +816,17 @@ input {
     color: var(--primary-color);
 }
 
-.social-links a i {
-    fill: white;
-    stroke: black;
-}
-
 .legal-links {
-    display: flex;
     gap: 30px;
+    display: flex;
 }
 
 .legal-links a {
-    color: rgba(255, 255, 255, 0.7);
     font-size: 1rem;
-    font-family: var(--light);
-    transition: color 0.3s;
     text-decoration: none;
+    transition: color 0.3s;
+    font-family: var(--light);
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .legal-links a:hover {
