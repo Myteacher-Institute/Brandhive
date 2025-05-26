@@ -90,10 +90,9 @@ section .title {
     text-align: center;
 }
 
-section .title h1,
+section .title h2,
 .footer-tagline h2,
 .hero .hero-text h1 {
-    margin: 0;
     opacity: 0;
     font-size: 64px;
     color: var(--text-color);
@@ -102,7 +101,7 @@ section .title h1,
     transition: all 0.8s ease-out;
 }
 
-section .title h1 span,
+section .title h2 span,
 .footer-tagline h2 span,
 .hero .hero-text h1 span {
     font-style: italic;
@@ -110,7 +109,7 @@ section .title h1 span,
 }
 
 /* 1. Fade In Up */
-section .title h1.visible,
+section .title h2.visible,
 .footer-tagline h2.visible,
 .hero .hero-text h1.visible {
     opacity: 1;
@@ -144,7 +143,7 @@ header {
 
 header::before {
     width: 100%;
-    content: "";
+    content: '';
     z-index: -1;
     height: 86px;
     position: fixed;
@@ -524,10 +523,10 @@ header .chat:hover,
 
 .portfolio-container button {
     cursor: pointer;
-    font-size: 1rem;
-    padding: 12px 24px;
-    border-radius: 5px;
-    color: var(--black-color);
+    font-size: 1.2rem;
+    border-radius: 10px;
+    padding: .6rem 1.5rem;
+    color: var(--text-color);
     transition: all 0.3s ease;
     font-family: var(--medium);
     background-color: var(--primary-color);

@@ -29,7 +29,7 @@ const initObservers = () => {
     document.querySelectorAll('p').forEach(p => fadeObserver.observe(p));
 
     const titleObserver = observer('visible');
-    document.querySelectorAll('section .title h1, .hero-text h1, .footer-tagline h2')
+    document.querySelectorAll('section .title h2, .hero-text h1, .footer-tagline h2')
         .forEach(el => titleObserver.observe(el));
 };
 
