@@ -2,13 +2,16 @@
 const initNav = () => {
     const navLinks = [...document.querySelectorAll('header nav a')];
     const clearActive = () => navLinks.forEach(l => l.classList.remove('active'));
+    
+    navLinks.forEach(link => link.addEventListener('click', () => {
+        clearActive();
+        link.classList.add('active');
+    }));
 
-    navLinks.forEach(link =>
-        link.addEventListener('click', () => {
-            clearActive();
-            link.classList.add('active');
-        })
-    );
+    document.querySelector('.hero-text a')?.addEventListener('click', () => {
+        clearActive();
+        document.querySelector('header nav a[href="#contact"]')?.classList.add('active');
+    });
 
     [...document.querySelectorAll('header .logo, header .chat')]
         .forEach(el => el?.addEventListener('click', clearActive));

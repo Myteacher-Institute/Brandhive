@@ -70,7 +70,6 @@ html {
 
 body {
     width: 100%;
-    font-display: swap;
     font-family: var(--regular);
     overflow: hidden auto !important;
     background-color: var(--white-color);
@@ -184,19 +183,27 @@ header nav a.active::after {
     background-color: var(--black-color);
 }
 
+header nav a.active::after {
+    background-color: var(--primary-color);
+}
+
 header .chat {
     font-size: 1rem;
     position: relative;
     border-radius: 10px;
     padding: 1rem 1.5rem;
     color: var(--text-color);
-    /* transition: all 0.3s ease; */
+    transition: all 0.3s ease;
     font-family: var(--medium);
     background-color: var(--primary-color);
 }
 
-header .chat:hover {
-    /* transform: translateY(-3px); */
+.footer-btn:hover,
+header .chat:hover,
+.see-more-btn:hover,
+.hero .hero-text a:hover,
+.content-wrapper a:hover,
+.portfolio-container button:hover {
     background-color: var(--hover-color);
 }
 
@@ -232,14 +239,9 @@ header .chat:hover {
     border-radius: 10px;
     display: inline-block;
     color: var(--text-color);
-    /* transition: all 0.3s ease; */
+    transition: all 0.3s ease;
     font-family: var(--medium);
     background-color: var(--primary-color);
-}
-
-.hero .hero-text a:hover {
-    /* transform: translateY(-3px); */
-    background-color: var(--hover-color);
 }
 
 .hero .hero-media {
@@ -311,10 +313,6 @@ header .chat:hover {
     font-family: var(--medium);
     background-color: var(--primary-color);
     transition: background-color 0.3s ease;
-}
-
-.content-wrapper a:hover {
-    background-color: var(--hover-color);
 }
 
 .services-container {
@@ -491,12 +489,13 @@ header .chat:hover {
     width: 100%;
     padding: 20px;
     margin: 0 auto;
+    text-align: center;
 }
 
 .portfolio-grid {
     gap: 20px;
     display: grid;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     grid-template-columns: repeat(2, 1fr);
 }
 
@@ -521,15 +520,7 @@ header .chat:hover {
     transform: scale(1.05);
 }
 
-/* See more button */
-.see-more-container {
-    display: flex;
-    margin-top: 20px;
-    justify-content: center;
-}
-
-.see-more-btn {
-    display: none;
+.portfolio-container button {
     cursor: pointer;
     font-size: 1rem;
     padding: 12px 24px;
@@ -538,11 +529,6 @@ header .chat:hover {
     transition: all 0.3s ease;
     font-family: var(--medium);
     background-color: var(--primary-color);
-}
-
-.see-more-btn:hover {
-    transform: translateY(-3px);
-    background-color: var(--hover-color);
 }
 
 /* Overlay styles */
@@ -588,9 +574,9 @@ header .chat:hover {
 
 /* contact us */
 #contact {
-    padding-inline: 30px;
-    scroll-margin-top: 90px;
-    margin: 0 auto 50px auto;
+    padding-inline: 20px;
+    scroll-margin-top: 50px;
+    margin: 30px auto 50px auto;
 }
 
 .contact-row {
@@ -735,12 +721,8 @@ input {
     align-items: center;
     justify-content: center;
     font-family: var(--medium);
-    /* transition: background 0.3s; */
+    transition: background 0.3s;
     background-color: var(--primary-color);
-}
-
-.footer-btn:hover {
-    background: var(--hover-color);
 }
 
 /* Divider line */
