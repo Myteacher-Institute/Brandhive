@@ -262,7 +262,8 @@ header .chat:hover,
 #about,
 #clients {
     width: 100%;
-    display: block;
+    display: flex;
+    flex-direction: column;
 }
 
 .know-us-content {
