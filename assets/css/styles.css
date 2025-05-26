@@ -259,6 +259,12 @@ header .chat:hover,
 }
 
 /*  Who we are section styling */
+#about,
+#clients {
+    width: 100%;
+    display: block;
+}
+
 .know-us-content {
     width: 100%;
     display: flex;
@@ -371,10 +377,6 @@ header .chat:hover,
 }
 
 /* why choose us section */
-#about {
-    width: 100%;
-}
-
 .why-choose-us-text {
     width: 800px;
     margin: 0 auto;
