@@ -1,4 +1,4 @@
-/* Critical CSS (Above-the-fold) */
+/* Critical CSS */
 :root {
     --text-color: #0D0D0D;
     --black-color: #000000;
@@ -88,18 +88,25 @@ section .title {
     padding: 2.5rem;
     margin-top: 40px;
     text-align: center;
-    background-color: #FFFFFF;
 }
 
 section .title h1,
 .footer-tagline h2,
 .hero .hero-text h1 {
+    margin: 0;
     opacity: 0;
     font-size: 64px;
     color: var(--text-color);
     font-family: var(--bold);
     transform: translateY(80px);
     transition: all 0.8s ease-out;
+}
+
+section .title h1 span,
+.footer-tagline h2 span,
+.hero .hero-text h1 span {
+    font-style: italic;
+    font-family: var(--special);
 }
 
 /* 1. Fade In Up */
@@ -225,11 +232,6 @@ header .chat:hover,
     margin-bottom: 45px;
     font-family: var(--bold);
     color: var(--black-color);
-}
-
-.hero .hero-text h1 span {
-    font-style: italic;
-    font-family: var(--special);
 }
 
 .hero .hero-text a {
@@ -663,11 +665,6 @@ footer::before {
     text-align: center;
     font-family: var(--bold);
     color: var(--white-color);
-}
-
-.footer-tagline h2 span {
-    font-style: italic;
-    font-family: var(--special);
 }
 
 /* Contact Form */
