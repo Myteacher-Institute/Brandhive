@@ -194,6 +194,7 @@ header nav a.active::after {
 }
 
 header .chat {
+    cursor: pointer;
     font-size: 1rem;
     position: relative;
     border-radius: 10px;
@@ -234,11 +235,11 @@ header .chat:hover,
 }
 
 .hero .hero-text a {
-    font-size: 24px;
-    font-weight: 400;
-    padding: 1rem 2rem;
+    cursor: pointer;
+    font-size: 1rem;
+    position: relative;
     border-radius: 10px;
-    display: inline-block;
+    padding: 1rem 1.5rem;
     color: var(--text-color);
     transition: all 0.3s ease;
     font-family: var(--medium);
@@ -314,13 +315,15 @@ header .chat:hover,
 }
 
 .content-wrapper a {
-    font-size: 24px;
+    cursor: pointer;
+    font-size: 1rem;
+    position: relative;
     border-radius: 10px;
-    padding: .6rem 1.5rem;
+    padding: 1rem 1.5rem;
     color: var(--text-color);
+    transition: all 0.3s ease;
     font-family: var(--medium);
     background-color: var(--primary-color);
-    transition: background-color 0.3s ease;
 }
 
 .services-container {
@@ -526,9 +529,10 @@ header .chat:hover,
 
 .portfolio-container button {
     cursor: pointer;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    position: relative;
     border-radius: 10px;
-    padding: .6rem 1.5rem;
+    padding: 1rem 1.5rem;
     color: var(--text-color);
     transition: all 0.3s ease;
     font-family: var(--medium);
@@ -709,18 +713,14 @@ input {
 }
 
 .footer-btn {
-    width: 180px;
-    height: 54px;
-    display: flex;
-    color: #222;
     cursor: pointer;
-    padding: 0 30px;
-    font-size: 1.1rem;
-    border-radius: 8px;
-    align-items: center;
-    justify-content: center;
+    font-size: 1rem;
+    position: relative;
+    border-radius: 10px;
+    padding: 1rem 1.5rem;
+    color: var(--text-color);
+    transition: all 0.3s ease;
     font-family: var(--medium);
-    transition: background 0.3s;
     background-color: var(--primary-color);
 }
 
