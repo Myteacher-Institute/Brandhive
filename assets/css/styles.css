@@ -69,9 +69,7 @@ html {
 }
 
 body {
-    width: 100%;
     font-family: var(--regular);
-    overflow: hidden auto !important;
     background-color: var(--white-color);
 }
 
@@ -80,6 +78,7 @@ section {
     width: 85%;
     display: grid;
     margin: 0 auto;
+    overflow-x: hidden;
     place-items: center;
 }
 
@@ -135,8 +134,8 @@ header {
     margin: 0 auto;
     position: sticky;
     padding-block: 1rem;
+    align-items: center;
     inset: 0 auto auto 0;
-    align-items: flex-end;
     justify-content: space-between;
     background-color: var(--white-color);
 }
@@ -156,11 +155,20 @@ header .logo img {
     height: 50px;
 }
 
+header button i {
+    font-size: 25px;
+}
+
 header nav {
     display: flex;
     column-gap: 6rem;
     align-items: center;
     padding-bottom: .5rem;
+}
+
+header nav,
+header .chat {
+    display: none;
 }
 
 header nav a {
@@ -594,7 +602,7 @@ header .chat:hover,
 /* Footer Styles */
 footer {
     padding: 0;
-    width: 100vw;
+    width: 100%;
     position: relative;
     color: var(--white-color);
     background: url('../images/footer.webp') center/cover no-repeat;
@@ -609,8 +617,8 @@ footer::before {
 }
 
 .footer-container {
-    z-index: 1;
     width: 85%;
+    z-index: 1;
     padding: 40px;
     display: flex;
     margin: 0 auto;

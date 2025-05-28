@@ -1,13 +1,23 @@
-/* TABLET (1024px and below) */
-@media (max-width: 1024px) {
-    /* Tablet-specific styles here */
+/* Laptop (1200px and above) */
+@media (min-width: 1200px) {
+    header {
+        align-items: flex-end;
+    }
+
+    header nav {
+        display: flex;
+    }
+
+    header button {
+        display: none;
+    }
 }
 
-/* MOBILE (768px and below) */
-@media (max-width: 1000px) {
-
-    /* Mobile-specific styles here */
-    /* .hero {} */
+/* Tablet (768px and above) */
+@media (min-width: 768px) {
+    header .chat {
+        display: block;
+    }
 
 }
 
