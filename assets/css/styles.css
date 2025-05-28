@@ -228,14 +228,8 @@ header .chat:hover,
 
 /* Hero section styles*/
 .hero {
-    gap: 40px;
+    gap: 100px;
     padding-top: 50px;
-}
-
-.hero .hero-text {
-    width: 855px;
-    height: 252px;
-    text-align: center;
 }
 
 .hero .hero-text h1 {
