@@ -1,7 +1,6 @@
 /* Critical CSS */
 :root {
-    --text-color: #0D0D0D;
-    --black-color: #000000;
+    --black-color: #0D0D0D;
     --hover-color: #D38B1D;
     --white-color: #FFFFFF;
     --primary-color: #F8B411;
@@ -94,8 +93,8 @@ section .title h2,
 .hero .hero-text h1 {
     opacity: 0;
     font-size: 64px;
-    color: var(--text-color);
     font-family: var(--bold);
+    color: var(--black-color);
     transform: translateY(80px);
     transition: all 0.8s ease-out;
 }
@@ -124,6 +123,31 @@ p {
 p.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+.footer-btn,
+header .chat,
+.content-wrapper a,
+.hero .hero-text a,
+.portfolio-container > button {
+    cursor: pointer;
+    font-size: 1rem;
+    position: relative;
+    border-radius: 10px;
+    padding: 1rem 1.5rem;
+    color: var(--black-color);
+    transition: all 0.3s ease;
+    font-family: var(--medium);
+    background-color: var(--primary-color);
+}
+
+.footer-btn:hover,
+header .chat:hover,
+.see-more-btn:hover,
+.hero .hero-text a:hover,
+.content-wrapper a:hover,
+.portfolio-container button:hover {
+    background-color: var(--hover-color);
 }
 
 /* Navigation styles */
@@ -174,7 +198,7 @@ header .chat {
 header nav a {
     font-size: 1rem;
     position: relative;
-    color: var(--text-color);
+    color: var(--black-color);
     font-family: var(--medium);
     transition: all 0.3s ease-in-out;
 }
@@ -201,29 +225,17 @@ header nav a.active::after {
     background-color: var(--primary-color);
 }
 
-.footer-btn,
-header .chat,
-.content-wrapper a,
-.hero .hero-text a,
-.portfolio-container button {
-    cursor: pointer;
-    font-size: 1rem;
-    position: relative;
-    border-radius: 10px;
-    padding: 1rem 1.5rem;
-    color: var(--text-color);
-    transition: all 0.3s ease;
-    font-family: var(--medium);
-    background-color: var(--primary-color);
-}
-
-.footer-btn:hover,
-header .chat:hover,
-.see-more-btn:hover,
-.hero .hero-text a:hover,
-.content-wrapper a:hover,
-.portfolio-container button:hover {
-    background-color: var(--hover-color);
+aside {
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: none;
+    position: fixed;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--black-color);
 }
 
 /* Hero section styles*/
@@ -337,8 +349,7 @@ header .chat:hover,
     content: '';
     position: absolute;
     pointer-events: none;
-    transition: background 0.3s;
-    background: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 /* Service images */
@@ -367,9 +378,9 @@ header .chat:hover,
     width: 800px;
     margin: 0 auto;
     line-height: 1.5;
-    text-align: center;
     font-size: 1.25rem;
-    color: var(--text-color);
+    text-align: center;
+    color: var(--black-color);
     font-family: var(--regular);
 }
 
@@ -384,8 +395,8 @@ header .chat:hover,
     font-size: 50px;
     position: absolute;
     border-radius: 50%;
-    background: transparent;
     color: var(--white-color);
+    background-color: transparent;
     transform: translate(-50%, -50%);
     /* background-color: rgba(0, 0, 0, 0.6); */
 }
@@ -409,7 +420,7 @@ header .chat:hover,
     border-radius: 30px;
     pointer-events: none;
     /* So it doesn't block clicks */
-    background: rgba(0, 0, 0, 0.35);
+    background-color: rgba(0, 0, 0, 0.35);
     /* Adjust opacity as needed */
 }
 
@@ -441,17 +452,6 @@ header .chat:hover,
     display: flex;
     animation: scrollX 20s linear infinite;
     /* Slow, steady scrolling */
-}
-
-@keyframes scrollX {
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(-100%);
-        /* Move exactly one set of slides */
-    }
 }
 
 /* .carousel-track:hover {
@@ -538,7 +538,6 @@ header .chat:hover,
     right: 10px;
     width: 30px;
     height: 30px;
-    color: #333;
     display: flex;
     cursor: pointer;
     font-size: 18px;
@@ -548,6 +547,7 @@ header .chat:hover,
     align-items: center;
     background: #F8B411;
     justify-content: center;
+    color: var(--black-color);
 }
 
 /* contact us */
@@ -573,8 +573,8 @@ header .chat:hover,
     align-items: center;
     letter-spacing: 0.5px;
     transition: color 0.2s;
-    color: var(--text-color);
     font-family: var(--bold);
+    color: var(--black-color);
 }
 
 .contact-icon i {
@@ -607,7 +607,7 @@ footer::before {
     z-index: 0;
     content: '';
     position: absolute;
-    background: rgba(0, 0, 0, 0.35);
+    background-color: rgba(0, 0, 0, 0.35);
 }
 
 .footer-container {
@@ -730,4 +730,15 @@ input {
 
 .legal-links a:hover {
     color: var(--primary-color);
+}
+
+@keyframes scrollX {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+        /* Move exactly one set of slides */
+    }
 }
