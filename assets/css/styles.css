@@ -125,12 +125,16 @@ p.visible {
     transform: translateY(0);
 }
 
+button {
+    cursor: pointer;
+    background-color: transparent;
+}
+
 .footer-btn,
 header .chat,
 .content-wrapper a,
 .hero .hero-text a,
 .portfolio-container > button {
-    cursor: pointer;
     font-size: 1rem;
     position: relative;
     border-radius: 10px;
@@ -249,7 +253,6 @@ aside button,
 .overlay-content button {
     width: 30px;
     height: 30px;
-    cursor: pointer;
     font-size: 18px;
     font-weight: bold;
     border-radius: 50%;
@@ -269,13 +272,13 @@ aside nav {
 aside nav a {
     font-size: 40px;
     position: relative;
+    height: max-content;
     font-family: var(--bold);
     color: var(--white-color);
 }
 
 aside nav a::after {
     height: 4px;
-    bottom: 15px;
 }
 
 aside nav a.active {
@@ -435,7 +438,6 @@ aside nav a.active {
     width: 150px;
     height: 150px;
     padding: 15px;
-    cursor: pointer;
     font-size: 50px;
     position: absolute;
     border-radius: 50%;
