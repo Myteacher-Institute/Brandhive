@@ -1,6 +1,13 @@
 /* Tablet (768px and above) */
 @media (min-width: 768px) {
 
+    /* General Styling */
+    section .title h2,
+    .footer-tagline h2,
+    .hero .hero-text h1 {
+        font-size: 64px;
+    }
+
     /* Header styles */
     header .chat {
         display: block;
@@ -27,6 +34,11 @@
     }
 
     /* why choose us section */
+    .why-choose-us-text {
+        width: 75%;
+        margin: 0 auto;
+        text-align: center;
+    }
 }
 
 /* Laptop (1200px and above) */

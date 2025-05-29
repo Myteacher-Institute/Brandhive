@@ -68,7 +68,10 @@ html {
 }
 
 body {
+    color: var(--black-color);
     font-family: var(--regular);
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
     background-color: var(--white-color);
 }
 
@@ -82,7 +85,6 @@ section {
 }
 
 section .title {
-    width: 100%;
     margin-top: 40px;
     text-align: center;
     padding-block: 2.5rem;
@@ -92,9 +94,8 @@ section .title h2,
 .footer-tagline h2,
 .hero .hero-text h1 {
     opacity: 0;
-    font-size: 64px;
+    font-size: 50px;
     font-family: var(--bold);
-    color: var(--black-color);
     transform: translateY(80px);
     transition: all 0.8s ease-out;
 }
@@ -126,14 +127,15 @@ p.visible {
 }
 
 button {
+    border: 0;
     cursor: pointer;
     background-color: transparent;
 }
 
 .footer-btn,
 header .chat,
-.content-wrapper a,
 .hero .hero-text a,
+.content-wrapper a,
 .portfolio-container>button {
     font-size: 1rem;
     position: relative;
@@ -228,6 +230,7 @@ header nav a.active::after {
     background-color: var(--black-color);
 }
 
+::selection,
 aside nav a.active::after,
 header nav a.active::after {
     background-color: var(--primary-color);
@@ -280,7 +283,9 @@ aside nav a::after {
     height: 4px;
 }
 
-aside nav a.active {
+aside nav a.active,
+.legal-links a:hover,
+.social-links a:hover {
     color: var(--primary-color);
 }
 
@@ -299,7 +304,6 @@ aside nav a.active {
     line-height: 1.1;
     margin-bottom: 45px;
     font-family: var(--bold);
-    color: var(--black-color);
 }
 
 .hero .hero-media {
@@ -423,38 +427,19 @@ aside nav a.active {
 
 /* why choose us section */
 .why-choose-us-text {
-    width: 800px;
-    margin: 0 auto;
     line-height: 1.5;
     font-size: 1.25rem;
-    text-align: center;
-    color: var(--black-color);
+    text-wrap: balance;
+    word-break: break-word;
     font-family: var(--regular);
 }
 
-/* why choose us video */
-.play-pause-btn {
-    inset: 50%;
-    z-index: 10;
-    width: 150px;
-    height: 150px;
-    padding: 15px;
-    font-size: 50px;
-    position: absolute;
-    border-radius: 50%;
-    color: var(--white-color);
-    background-color: transparent;
-    transform: translate(-50%, -50%);
-    /* background-color: rgba(0, 0, 0, 0.6); */
-}
-
-.play-pause-btn i {
-    top: 15%;
-    left: 32%;
-    font-size: 6rem;
-    position: absolute;
-    pointer-events: none;
-    /* Ensures clicks go to the button, not the icon */
+.video-wrapper {
+    width: 85%;
+    height: 70vh;
+    position: relative;
+    border-radius: 25px;
+    margin: 65px auto 0 auto;
 }
 
 .video-wrapper::before {
@@ -466,17 +451,7 @@ aside nav a.active {
     position: absolute;
     border-radius: 30px;
     pointer-events: none;
-    /* So it doesn't block clicks */
     background-color: rgba(0, 0, 0, 0.35);
-    /* Adjust opacity as needed */
-}
-
-.video-wrapper {
-    width: 85%;
-    height: 70vh;
-    position: relative;
-    border-radius: 25px;
-    margin: 65px auto 0 auto;
 }
 
 .video-wrapper video {
@@ -486,6 +461,20 @@ aside nav a.active {
     object-fit: cover;
     position: relative;
     border-radius: 30px;
+}
+
+.play-pause-btn {
+    inset: 50%;
+    z-index: 10;
+    width: 150px;
+    height: 150px;
+    padding: 15px;
+    font-size: 6rem;
+    border-radius: 50%;
+    position: absolute;
+    color: var(--white-color);
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 /* Partners Carousel Styles */
@@ -668,8 +657,7 @@ footer::before {
 }
 
 .footer-tagline h2 {
-    margin: 0;
-    width: 900px;
+    /* width: 900px; */
     line-height: 1.2;
     font-weight: 400;
     font-size: 4.5rem;
@@ -678,7 +666,6 @@ footer::before {
     color: var(--white-color);
 }
 
-/* Contact Form */
 .footer-form {
     gap: 20px;
     width: 85%;
@@ -687,10 +674,6 @@ footer::before {
     padding-bottom: 60px;
     flex-direction: column;
     justify-content: center;
-}
-
-input {
-    color: var(--white-color);
 }
 
 .footer-input {
@@ -705,19 +688,15 @@ input {
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.footer-input::placeholder {
-    color: rgba(255, 255, 255, 0.3);
+.footer-input,
+.footer-input:focus::placeholder {
+    color: var(--white-color);
 }
 
 .footer-input:focus {
     border: 1px solid var(--white-color);
 }
 
-.footer-input:focus::placeholder {
-    color: var(--white-color);
-}
-
-/* Divider line */
 .footer-divider {
     width: 100%;
     height: 2px;
@@ -727,7 +706,6 @@ input {
     border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-/* Footer Bottom */
 .footer-bottom {
     width: 100%;
     display: flex;
@@ -747,10 +725,6 @@ input {
     transition: color 0.3s;
 }
 
-.social-links a:hover {
-    color: var(--primary-color);
-}
-
 .legal-links {
     gap: 30px;
     display: flex;
@@ -761,10 +735,6 @@ input {
     transition: color 0.3s;
     font-family: var(--light);
     color: rgba(255, 255, 255, 0.7);
-}
-
-.legal-links a:hover {
-    color: var(--primary-color);
 }
 
 @keyframes scrollX {
