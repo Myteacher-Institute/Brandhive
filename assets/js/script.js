@@ -1,3 +1,63 @@
+// Infinite logo carousel
+const initCarousel = () => {
+    const track = document.querySelector('.carousel-track');
+    if (!track) return;
+
+    const slides = Array.from(track.children);
+    let position = 0;
+    let scrollSpeed = 0.5;
+    let paused = false;
+
+    // Clone slides for seamless loop
+    slides.forEach(slide => {
+        const clone = slide.cloneNode(true);
+        clone.setAttribute('aria-hidden', 'true');
+        track.appendChild(clone);
+    });
+
+    // ---- Pause on hover (comment to disable) ----
+    track.addEventListener('mouseenter', () => paused = true);
+    track.addEventListener('mouseleave', () => paused = false);
+    // --------------------------------------------
+
+    // ---- Touch drag support (comment to disable) ----
+    let isDragging = false;
+    let startX = 0;
+
+    track.addEventListener('touchstart', (e) => {
+        isDragging = true;
+        startX = e.touches[0].clientX;
+    });
+
+    track.addEventListener('touchmove', (e) => {
+        if (!isDragging) return;
+        const currentX = e.touches[0].clientX;
+        const deltaX = currentX - startX;
+        position += deltaX;
+        startX = currentX;
+        track.style.transform = `translateX(${position}px)`;
+    });
+
+    track.addEventListener('touchend', () => {
+        isDragging = false;
+    });
+    // --------------------------------------------------
+
+    // Animation loop
+    const animate = () => {
+        if (!paused && !isDragging) {
+            position -= scrollSpeed;
+            if (Math.abs(position) >= track.scrollWidth / 2) {
+                position = 0;
+            }
+            track.style.transform = `translateX(${position}px)`;
+        }
+        requestAnimationFrame(animate);
+    };
+
+    animate();
+};
+
 // Navigation state
 const initNav = () => {
     const aside = document.querySelector('aside');
@@ -7,8 +67,7 @@ const initNav = () => {
     navLinks.forEach(link => link.addEventListener('click', () => {
         clearActive();
         link.classList.add('active');
-
-        if (aside.contains(link)) { aside.classList.remove('open') }
+        if (aside.contains(link)) aside.classList.remove('open');
     }));
 
     document.querySelector('.hero-text a')?.addEventListener('click', () => {
@@ -19,19 +78,6 @@ const initNav = () => {
     document.querySelectorAll('header .logo, header .chat').forEach(el =>
         el.addEventListener('click', clearActive)
     );
-};
-
-
-// Menu toggle
-const initMenu = () => {
-    const menu = document.querySelector('aside');
-    const openMenu = document.querySelector('header button');
-    const closeMenu = document.querySelector('aside button');
-
-    if (!menu || !openMenu || !closeMenu) return console.warn('Menu toggle elements not found in DOM');
-
-    openMenu.addEventListener('click', () => menu.classList.add('open'));
-    closeMenu.addEventListener('click', () => menu.classList.remove('open'));
 };
 
 // Scroll animations
@@ -61,7 +107,19 @@ const initVideo = () => {
     });
 };
 
-// Overlay Control
+// Menu toggle
+const initMenu = () => {
+    const menu = document.querySelector('aside');
+    const openMenu = document.querySelector('header button');
+    const closeMenu = document.querySelector('aside button');
+
+    if (!menu || !openMenu || !closeMenu) return console.warn('Menu toggle elements not found in DOM');
+
+    openMenu.addEventListener('click', () => menu.classList.add('open'));
+    closeMenu.addEventListener('click', () => menu.classList.remove('open'));
+};
+
+// Image overlay
 class ImageOverlay {
     static #overlay = document.getElementById('imageOverlay');
     static #img = document.getElementById('overlayImage') || this.#createImage();
@@ -90,11 +148,12 @@ class ImageOverlay {
     }
 }
 
-// Initialize everything
+// Init everything when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
     initNav();
     initMenu();
     initVideo();
+    initCarousel();
     initObservers();
     ImageOverlay.init();
 });

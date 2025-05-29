@@ -85,6 +85,7 @@ section {
 }
 
 section .title {
+    width: 100%;
     margin-top: 40px;
     text-align: center;
     padding-block: 2.5rem;
@@ -94,7 +95,7 @@ section .title h2,
 .footer-tagline h2,
 .hero .hero-text h1 {
     opacity: 0;
-    font-size: 50px;
+    font-size: 44px;
     font-family: var(--bold);
     transform: translateY(80px);
     transition: all 0.8s ease-out;
@@ -428,15 +429,15 @@ aside nav a.active,
 /* why choose us section */
 .why-choose-us-text {
     line-height: 1.5;
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     text-wrap: balance;
     word-break: break-word;
     font-family: var(--regular);
 }
 
 .video-wrapper {
-    width: 85%;
-    height: 70vh;
+    width: 100%;
+    height: 60vh;
     position: relative;
     border-radius: 25px;
     margin: 65px auto 0 auto;
@@ -456,7 +457,7 @@ aside nav a.active,
 
 .video-wrapper video {
     width: 100%;
-    height: 70vh;
+    height: 100%;
     display: block;
     object-fit: cover;
     position: relative;
@@ -466,10 +467,9 @@ aside nav a.active,
 .play-pause-btn {
     inset: 50%;
     z-index: 10;
-    width: 150px;
-    height: 150px;
-    padding: 15px;
-    font-size: 6rem;
+    width: 100px;
+    height: 100px;
+    font-size: 3rem;
     border-radius: 50%;
     position: absolute;
     color: var(--white-color);
@@ -477,39 +477,43 @@ aside nav a.active,
     background-color: rgba(0, 0, 0, 0.4);
 }
 
-/* Partners Carousel Styles */
-.partners-carousel {
+/* Clients section Styles */
+.clients-carousel {
     width: 100%;
+    cursor: grab;
     padding: 40px 0;
+    overflow: hidden;
     position: relative;
+    touch-action: pan-y;
 }
 
 .carousel-track {
+    gap: 1rem;
     display: flex;
-    animation: scrollX 20s linear infinite;
-    /* Slow, steady scrolling */
+    will-change: transform;
 }
 
-/* .carousel-track:hover {
-    animation-play-state: paused;
-} */
-
 .carousel-slide {
+    width: 33.33%;
     display: flex;
-    flex-shrink: 0;
+    flex: 0 0 auto;
     align-items: center;
+    padding-inline: 0.5rem;
     justify-content: center;
-    min-width: calc(100% / 4);
-    /* Show 4 slides at once on desktop */
 }
 
 .carousel-slide img {
     width: auto;
-    max-height: 80px;
-    object-fit: contain;
+    max-height: 50px;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
 }
 
-/* brandhive project */
+.carousel-slide img:hover {
+    filter: grayscale(0%);
+}
+
+/* Project section styles */
 .portfolio-container {
     width: 100%;
     padding: 20px;
@@ -521,7 +525,6 @@ aside nav a.active,
     gap: 20px;
     display: grid;
     margin-bottom: 40px;
-    grid-template-columns: repeat(2, 1fr);
 }
 
 .portfolio-item {
@@ -735,15 +738,4 @@ footer::before {
     transition: color 0.3s;
     font-family: var(--light);
     color: rgba(255, 255, 255, 0.7);
-}
-
-@keyframes scrollX {
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(-100%);
-        /* Move exactly one set of slides */
-    }
 }
