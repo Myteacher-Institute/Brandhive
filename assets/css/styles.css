@@ -134,7 +134,7 @@ button {
 header .chat,
 .content-wrapper a,
 .hero .hero-text a,
-.portfolio-container > button {
+.portfolio-container>button {
     font-size: 1rem;
     position: relative;
     border-radius: 10px;
@@ -288,6 +288,10 @@ aside nav a.active {
 .hero {
     gap: 100px;
     padding-top: 50px;
+}
+
+.hero .hero-text {
+    text-align: center;
 }
 
 .hero .hero-text h1 {

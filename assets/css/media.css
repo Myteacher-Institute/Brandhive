@@ -1,17 +1,20 @@
 /* Tablet (768px and above) */
 @media (min-width: 768px) {
+
+    /* Header styles */
     header .chat {
         display: block;
     }
 
     .hero .hero-text {
         width: 855px;
-        text-align: center;
     }
 }
 
 /* Laptop (1200px and above) */
 @media (min-width: 1200px) {
+
+    /* Header styles */
     header {
         align-items: flex-end;
     }
