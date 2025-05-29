@@ -376,7 +376,6 @@ aside nav a.active {
     width: 100%;
     display: grid;
     margin: 0 auto;
-    grid-template-columns: repeat(3, 1fr);
 }
 
 .service-card {
@@ -393,7 +392,6 @@ aside nav a.active {
     transition: all 0.3s ease;
 }
 
-/* Background overlay */
 .service-card::before {
     inset: 0;
     z-index: 1;
@@ -403,7 +401,6 @@ aside nav a.active {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* Service images */
 .service-card img {
     inset: 0;
     z-index: 0;

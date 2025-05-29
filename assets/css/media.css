@@ -6,10 +6,12 @@
         display: block;
     }
 
+    /* Hero section styles */
     .hero .hero-text {
         width: 855px;
     }
 
+    /* About section styles */
     .content-wrapper {
         width: 50%;
         text-align: center;
@@ -18,6 +20,13 @@
     .content-wrapper p {
         -webkit-line-clamp: 3;
     }
+
+    /* Services section styles */
+    .services-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* why choose us section */
 }
 
 /* Laptop (1200px and above) */
