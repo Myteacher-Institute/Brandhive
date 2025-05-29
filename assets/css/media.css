@@ -8,7 +8,8 @@
     }
 
     /* Header styles */
-    header .chat {
+    header .chat,
+    .portfolio-item:nth-child(n+3) {
         display: block;
     }
 
@@ -62,6 +63,10 @@
     /* Project section styles */
     .portfolio-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .overlay-content {
+        max-width: 100%;
     }
 }
 
