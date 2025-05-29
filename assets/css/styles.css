@@ -83,9 +83,9 @@ section {
 
 section .title {
     width: 100%;
-    padding: 2.5rem;
     margin-top: 40px;
     text-align: center;
+    padding-block: 2.5rem;
 }
 
 section .title h2,
