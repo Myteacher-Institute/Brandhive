@@ -325,13 +325,11 @@ aside nav a.active {
 
 .know-us-content {
     width: 100%;
-    display: flex;
+    display: grid;
     overflow: hidden;
     min-height: 60vh;
     position: relative;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
+    place-items: center;
 }
 
 /* Dark overlay */
@@ -355,21 +353,24 @@ aside nav a.active {
 }
 
 .content-wrapper {
-    width: 80%;
+    width: 75%;
     z-index: 2;
-    max-width: 800px;
     position: relative;
     color: var(--white-color);
     font-family: var(--light);
 }
 
 .content-wrapper p {
+    overflow: hidden;
     line-height: 1.5;
-    font-size: 1.25rem;
-    text-align: center;
+    font-size: 1.3rem;
     margin-bottom: 40px;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
 }
 
+/* Services section styling */
 .services-container {
     gap: 20px;
     width: 100%;

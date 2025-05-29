@@ -9,6 +9,15 @@
     .hero .hero-text {
         width: 855px;
     }
+
+    .content-wrapper {
+        width: 50%;
+        text-align: center;
+    }
+
+    .content-wrapper p {
+        -webkit-line-clamp: 3;
+    }
 }
 
 /* Laptop (1200px and above) */
