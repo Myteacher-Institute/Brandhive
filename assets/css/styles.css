@@ -191,6 +191,7 @@ header nav {
     padding-bottom: .5rem;
 }
 
+aside,
 header nav,
 header .chat {
     display: none;
@@ -235,10 +236,13 @@ aside {
     height: 100%;
     z-index: 9999;
     padding: 5rem;
-    display: grid;
     position: fixed;
     place-items: center;
     background-color: var(--black-color);
+}
+
+aside.open {
+    display: grid;
 }
 
 aside button,
