@@ -142,6 +142,7 @@ header .chat,
 }
 
 .footer-btn:hover,
+aside button:hover,
 header .chat:hover,
 .see-more-btn:hover,
 .hero .hero-text a:hover,
@@ -203,6 +204,7 @@ header nav a {
     transition: all 0.3s ease-in-out;
 }
 
+aside nav a::after,
 header nav a::after {
     left: 0;
     width: 0;
@@ -211,9 +213,9 @@ header nav a::after {
     bottom: -5px;
     margin: 0 auto;
     position: absolute;
-    background-color: var(--black-color);
 }
 
+aside nav a.active::after,
 header nav a:hover::after,
 header nav a.active::after {
     width: 60%;
@@ -221,21 +223,59 @@ header nav a.active::after {
     background-color: var(--black-color);
 }
 
+aside nav a.active::after,
 header nav a.active::after {
     background-color: var(--primary-color);
 }
 
 aside {
     inset: 0;
+    gap: 1rem;
     width: 100%;
     height: 100%;
     z-index: 9999;
-    display: none;
+    padding: 5rem;
+    display: grid;
     position: fixed;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
+    place-items: center;
     background-color: var(--black-color);
+}
+
+aside button,
+.overlay-content button {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 50%;
+    justify-self: flex-end;
+    color: var(--black-color);
+    background-color: var(--primary-color);
+}
+
+aside nav {
+    gap: 2rem;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    justify-items: flex-end;
+}
+
+aside nav a {
+    font-size: 40px;
+    position: relative;
+    font-family: var(--bold);
+    color: var(--white-color);
+}
+
+aside nav a::after {
+    height: 4px;
+    bottom: 15px;
+}
+
+aside nav a.active {
+    color: var(--primary-color);
 }
 
 /* Hero section styles*/
@@ -533,21 +573,10 @@ aside {
     border-radius: 5px;
 }
 
-.close-btn {
+.overlay-content button {
     top: 10px;
     right: 10px;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: bold;
     position: absolute;
-    border-radius: 50%;
-    align-items: center;
-    background: #F8B411;
-    justify-content: center;
-    color: var(--black-color);
 }
 
 /* contact us */
@@ -585,12 +614,11 @@ aside {
 .contact-icon {
     width: 50px;
     height: 50px;
-    display: flex;
+    display: grid;
     font-size: 1.5rem;
     border-radius: 50%;
-    align-items: center;
-    justify-content: center;
-    background-color: #e8eddf;
+    place-items: center;
+    background-color: #F5F3F3;
 }
 
 /* Footer Styles */

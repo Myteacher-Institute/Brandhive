@@ -8,6 +8,7 @@
         display: flex;
     }
 
+    aside,
     header button {
         display: none;
     }

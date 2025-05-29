@@ -1,6 +1,6 @@
 // Navigation state
 const initNav = () => {
-    const navLinks = [...document.querySelectorAll('header nav a')];
+    const navLinks = document.querySelectorAll('header nav a, aside nav a');
     const clearActive = () => navLinks.forEach(l => l.classList.remove('active'));
     
     navLinks.forEach(link => link.addEventListener('click', () => {

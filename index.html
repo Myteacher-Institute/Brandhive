@@ -46,7 +46,7 @@
         <a href="#" class="logo" aria-label="Brandhive Home">
             <img src="assets/images/logo.webp" alt="Brandhive Logo" width="auto" height="auto" loading="eager">
         </a>
-        <button aria-label="Toggle Menu">
+        <button aria-label="Open Menu">
             <i class="fa-solid fa-bars"></i>
         </button>
         <nav aria-label="Main Navigation">
@@ -59,7 +59,16 @@
     </header>
 
     <aside>
-        
+        <button aria-label="Close Menu">
+            <i class="fas fa-times"></i>
+        </button>
+        <nav aria-label="Aside Navigation">
+            <a href="#">Home</a>
+            <a href="#about">About Us</a>
+            <a href="#services">Our Services</a>
+            <a href="#projects">Our Projects</a>
+            <a href="#contact">Contact Us</a>
+        </nav>
     </aside>
 
     <!-- Main Content -->
@@ -82,7 +91,9 @@
 
         <!-- About Us -->
         <section id="about">
-            <div class="title"><h2>Who <span>we</span> are</h2></div>
+            <div class="title">
+                <h2>Who <span>we</span> are</h2>
+            </div>
             <div class="know-us-content">
                 <img src="assets/images/about.webp" alt="Brandhive Team" loading="lazy" width="auto" height="auto">
                 <div class="content-wrapper">
@@ -96,7 +107,9 @@
 
         <!-- Our Services -->
         <section id="services">
-            <div class="title"><h2><span>Our</span> Services</h2></div>
+            <div class="title">
+                <h2><span>Our</span> Services</h2>
+            </div>
             <div class="services-container">
                 <article class="service-card branding" aria-label="Branding & Design">
                     <img src="assets/images/branding.webp" alt="Branding & Design" loading="lazy" width="auto"
@@ -132,7 +145,9 @@
 
         <!-- Why Choose Us -->
         <section>
-            <div class="title"><h2>Why choose <span>us</span></h2></div>
+            <div class="title">
+                <h2>Why choose <span>us</span></h2>
+            </div>
             <div>
                 <p class="why-choose-us-text">
                     By choosing us, you gain a creative partner focused on delivering results, not just services. Our
@@ -154,7 +169,9 @@
 
         <!-- Clients Section -->
         <section id="clients">
-            <div class="title"><h2><span>Our</span> Clients</h2></div>
+            <div class="title">
+                <h2><span>Our</span> Clients</h2>
+            </div>
             <div class="partners-carousel" role="region" aria-label="Client logos carousel" aria-live="polite">
                 <div class="carousel-track">
                     <div class="carousel-slide">
@@ -192,27 +209,33 @@
 
         <!-- Our Projects -->
         <section id="projects">
-            <div class="title"><h2><span>Our</span> Recent Works</h2></div>
+            <div class="title">
+                <h2><span>Our</span> Recent Works</h2>
+            </div>
             <div class="portfolio-container">
                 <div class="portfolio-grid">
                     <figure class="portfolio-item" onclick="ImageOverlay.open('assets/images/clientsAcct.webp')">
-                        <img src="assets/images/clientsAcct.webp" alt="Clients Account Project" loading="lazy" width="auto" height="auto">
+                        <img src="assets/images/clientsAcct.webp" alt="Clients Account Project" loading="lazy"
+                            width="auto" height="auto">
                     </figure>
                     <figure class="portfolio-item" onclick="ImageOverlay.open('assets/images/charrides.webp')">
-                        <img src="assets/images/charrides.webp" alt="Charrides Project" loading="lazy" width="auto" height="auto">
+                        <img src="assets/images/charrides.webp" alt="Charrides Project" loading="lazy" width="auto"
+                            height="auto">
                     </figure>
                     <figure class="portfolio-item" onclick="ImageOverlay.open('assets/images/flyway.webp')">
-                        <img src="assets/images/flyway.webp" alt="Flyway Project" loading="lazy" width="auto" height="auto">
+                        <img src="assets/images/flyway.webp" alt="Flyway Project" loading="lazy" width="auto"
+                            height="auto">
                     </figure>
                     <figure class="portfolio-item" onclick="ImageOverlay.open('assets/images/myteacher.webp')">
-                        <img src="assets/images/myteacher.webp" alt="MyTeacher Project" loading="lazy" width="auto" height="auto">
+                        <img src="assets/images/myteacher.webp" alt="MyTeacher Project" loading="lazy" width="auto"
+                            height="auto">
                     </figure>
                 </div>
                 <button>See more</button>
                 <!-- Overlay -->
                 <div class="overlay" id="imageOverlay" role="dialog" aria-modal="true" aria-hidden="true">
                     <div class="overlay-content">
-                        <button class="close-btn" onclick="ImageOverlay.close()" aria-label="Close">
+                        <button onclick="ImageOverlay.close()" aria-label="Close">
                             <i class="fas fa-times"></i>
                         </button>
                         <img id="overlayImage" src="" alt="Enlarged project image">
