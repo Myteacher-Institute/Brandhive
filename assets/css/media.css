@@ -2,6 +2,12 @@
 @media (min-width: 768px) {
 
     /* General Styling */
+    header,
+    section,
+    footer>div {
+        width: 85%;
+    }
+
     section .title h2,
     .footer-tagline h2 {
         font-size: 64px;
@@ -88,8 +94,16 @@
         font-size: 4.5rem;
     }
 
+    footer form {
+        padding-bottom: 60px;
+    }
+
     footer form input {
         width: 40%;
+    }
+
+    .footer-bottom div {
+        width: max-content;
     }
 }
 
