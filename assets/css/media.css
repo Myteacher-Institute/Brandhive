@@ -1,3 +1,115 @@
+<<<<<<< HEAD
+=======
+/* Tablet (768px and above) */
+@media (min-width: 768px) {
+
+    /* General Styling */
+    header,
+    section,
+    footer>div {
+        width: 85%;
+    }
+
+    section .title h2,
+    .footer-tagline h2 {
+        font-size: 64px;
+    }
+
+    /* Header styles */
+    header .chat,
+    .portfolio-item:nth-child(n+3) {
+        display: block;
+    }
+
+    /* Hero section styles */
+    .hero .hero-text {
+        width: 855px;
+    }
+
+    /* About section styles */
+    .know-us-content {
+        min-height: 60vh;
+    }
+
+    .content-wrapper {
+        width: 50%;
+        text-align: center;
+    }
+
+    .content-wrapper p {
+        -webkit-line-clamp: 3;
+    }
+
+    /* Services section styles */
+    .services-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* why choose us section */
+    .why-choose-us-text {
+        width: 75%;
+        margin: 0 auto;
+    }
+
+    .video-wrapper {
+        width: 85%;
+        height: 70vh;
+    }
+
+    .play-pause-btn {
+        width: 150px;
+        height: 150px;
+        font-size: 6rem;
+    }
+
+    /* Clients section styles */
+    .carousel-slide {
+        width: 25%;
+    }
+
+    .carousel-slide img {
+        max-height: 60px;
+    }
+
+    /* Project section styles */
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .overlay-content {
+        max-width: 100%;
+    }
+
+    /* contact section styles */
+    #contact {
+        padding-inline: 20px;
+    }
+
+    .contact-row,
+    .footer-bottom {
+        flex-direction: row;
+    }
+
+    /* Footer Styles */
+    footer h2 {
+        max-width: 20ch;
+        font-size: 4.5rem;
+    }
+
+    footer form {
+        padding-bottom: 60px;
+    }
+
+    footer form input {
+        width: 40%;
+    }
+
+    .footer-bottom div {
+        width: max-content;
+    }
+}
+
+>>>>>>> 2de6684d60d6457b1e56bfeea5f881c93fa875fe
 /* Laptop (1200px and above) */
 @media (min-width: 1200px) {
     header {
