@@ -68,6 +68,12 @@
     .overlay-content {
         max-width: 100%;
     }
+
+    /* contact section styles */
+    .contact-row {
+        align-items: center;
+        flex-direction: row;
+    }
 }
 
 /* Laptop (1200px and above) */

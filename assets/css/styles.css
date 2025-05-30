@@ -242,9 +242,9 @@ aside {
     gap: 7rem;
     width: 100%;
     height: 100%;
+    padding: 5rem;
     z-index: 9999;
     position: fixed;
-    padding: 2rem 5rem;
     align-content: center;
     background-color: var(--black-color);
 }
@@ -581,7 +581,7 @@ aside nav a.active,
     position: absolute;
 }
 
-/* contact us */
+/* contact section styles */
 #contact {
     padding-inline: 20px;
     scroll-margin-top: 50px;
@@ -589,10 +589,12 @@ aside nav a.active,
 }
 
 .contact-row {
+    gap: 15px;
     width: 100%;
     display: flex;
     padding: 32px 0;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     justify-content: space-between;
 }
 
