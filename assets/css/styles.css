@@ -195,7 +195,6 @@ header button i {
 
 header nav {
     display: flex;
-    column-gap: 6rem;
     align-items: center;
     padding-bottom: .5rem;
 }

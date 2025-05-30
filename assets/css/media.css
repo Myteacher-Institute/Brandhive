@@ -13,24 +13,29 @@
         font-size: 64px;
     }
 
-    .whatsapp-float {
+    /* Header styles */
+    header {
+        align-items: flex-end;
+    }
+
+    header nav {
+        display: flex;
+        column-gap: 3rem;
+    }
+
+    header .chat,
+    header button {
         display: none;
     }
 
-    /* Header styles */
-    header .chat,
-    .portfolio-item:nth-child(n+3) {
-        display: block;
-    }
-
     /* Hero section styles */
-    .hero .hero-text {
-        width: 855px;
+    .hero .hero-text h1 {
+        max-width: 20ch;
     }
 
     /* About section styles */
     .know-us-content {
-        min-height: 60vh;
+        min-height: 40vh;
     }
 
     .content-wrapper {
@@ -39,12 +44,12 @@
     }
 
     .content-wrapper p {
-        -webkit-line-clamp: 3;
+        -webkit-line-clamp: initial;
     }
 
     /* Services section styles */
     .services-container {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
     /* why choose us section */
@@ -70,16 +75,16 @@
     }
 
     .carousel-slide img {
-        max-height: 80px;
+        max-height: 70px;
     }
 
     /* Project section styles */
-    .portfolio-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .portfolio-item {
+        height: 30vh;
     }
 
     .overlay-content {
-        max-width: 100%;
+        width: 100%;
     }
 
     /* contact section styles */
@@ -87,9 +92,8 @@
         padding-inline: 20px;
     }
 
-    .contact-row,
-    .footer-bottom {
-        flex-direction: row;
+    .contact-row {
+        align-items: center;
     }
 
     /* Footer Styles */
@@ -103,7 +107,11 @@
     }
 
     footer form input {
-        width: 40%;
+        width: 60%;
+    }
+
+    .footer-bottom {
+        flex-direction: row;
     }
 
     .footer-bottom div {
@@ -113,16 +121,63 @@
 
 /* Laptop (1200px and above) */
 @media (min-width: 1200px) {
-    header {
-        align-items: flex-end;
-    }
 
+    /* Header styles */
     header nav {
-        display: flex;
+        column-gap: 6rem;
     }
 
-    header button {
+    header .chat,
+    .portfolio-item:nth-child(n+3) {
+        display: block;
+    }
+
+    .whatsapp-float {
         display: none;
+    }
+
+    /* Hero section styles */
+    .hero .hero-text h1 {
+        max-width: 30ch;
+    }
+
+    /* About section styles */
+    .know-us-content {
+        min-height: 60vh;
+    }
+
+    /* Services section styles */
+    .services-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Clients section styles */
+    .carousel-slide img {
+        max-height: 80px;
+    }
+
+    /* Project section styles */
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .portfolio-item {
+        height: 40vh;
+    }
+
+    .overlay-content {
+        width: auto;
+        max-width: 100%;
+    }
+
+    /* contact section styles */
+    .contact-row {
+        flex-direction: row;
+    }
+
+    /* Footer Styles */
+    footer form input {
+        width: 50%;
     }
 }
 
