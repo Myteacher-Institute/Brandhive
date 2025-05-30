@@ -553,6 +553,7 @@ aside nav a.active,
 }
 
 .portfolio-item:hover img {
+    border-radius: 10px;
     transform: scale(1.05);
 }
 
