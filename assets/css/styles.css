@@ -91,8 +91,8 @@ section .title {
     padding-block: 2.5rem;
 }
 
+footer h2,
 section .title h2,
-.footer-tagline h2,
 .hero .hero-text h1 {
     opacity: 0;
     font-size: 44px;
@@ -101,16 +101,16 @@ section .title h2,
     transition: all 0.8s ease-out;
 }
 
+footer h2 span,
 section .title h2 span,
-.footer-tagline h2 span,
 .hero .hero-text h1 span {
     font-style: italic;
     font-family: var(--special);
 }
 
 /* 1. Fade In Up */
+footer h2.visible,
 section .title h2.visible,
-.footer-tagline h2.visible,
 .hero .hero-text h1.visible {
     opacity: 1;
     transform: translateY(0);
@@ -133,8 +133,8 @@ button {
     background-color: transparent;
 }
 
-.footer-btn,
 header .chat,
+footer form button,
 .hero .hero-text a,
 .content-wrapper a,
 .portfolio-container>button {
@@ -148,10 +148,10 @@ header .chat,
     background-color: var(--primary-color);
 }
 
-.footer-btn:hover,
 aside button:hover,
 header .chat:hover,
 .see-more-btn:hover,
+footer form button:hover,
 .hero .hero-text a:hover,
 .content-wrapper a:hover,
 .portfolio-container button:hover {
@@ -242,9 +242,9 @@ aside {
     gap: 7rem;
     width: 100%;
     height: 100%;
-    padding: 5rem;
     z-index: 9999;
     position: fixed;
+    padding: 5rem 4rem;
     align-content: center;
     background-color: var(--black-color);
 }
@@ -285,8 +285,7 @@ aside nav a::after {
 }
 
 aside nav a.active,
-.legal-links a:hover,
-.social-links a:hover {
+.footer-bottom div a:hover {
     color: var(--primary-color);
 }
 
@@ -320,7 +319,7 @@ aside nav a.active,
     border-radius: 16px;
 }
 
-/*  Who we are section styling */
+/*  About section styling */
 #about,
 #clients {
     width: 100%;
@@ -332,7 +331,7 @@ aside nav a.active,
     width: 100%;
     display: grid;
     overflow: hidden;
-    min-height: 60vh;
+    min-height: 50vh;
     position: relative;
     place-items: center;
 }
@@ -430,6 +429,7 @@ aside nav a.active,
 .why-choose-us-text {
     line-height: 1.5;
     font-size: 1.2rem;
+    text-align: center;
     text-wrap: balance;
     word-break: break-word;
     font-family: var(--regular);
@@ -583,7 +583,6 @@ aside nav a.active,
 
 /* contact section styles */
 #contact {
-    padding-inline: 20px;
     scroll-margin-top: 50px;
     margin: 30px auto 50px auto;
 }
@@ -593,13 +592,13 @@ aside nav a.active,
     width: 100%;
     display: flex;
     padding: 32px 0;
+    align-items: center;
     flex-direction: column;
-    align-items: flex-start;
     justify-content: space-between;
 }
 
 .contact-link {
-    gap: 12px;
+    gap: 10px;
     display: flex;
     font-weight: bold;
     font-size: 1.5rem;
@@ -642,7 +641,7 @@ footer::before {
     background-color: rgba(0, 0, 0, 0.35);
 }
 
-.footer-container {
+footer > div {
     width: 85%;
     z-index: 1;
     padding: 40px;
@@ -654,29 +653,22 @@ footer::before {
     justify-content: center;
 }
 
-/* Tagline */
-.footer-tagline {
-    width: 100%;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    margin-bottom: 40px;
-    justify-content: center;
-}
-
-.footer-tagline h2 {
-    /* width: 900px; */
+footer h2 {
+    font-size: 3rem;
+    min-width: 12ch;
     line-height: 1.2;
     font-weight: 400;
-    font-size: 4.5rem;
     text-align: center;
+    white-space: normal;
+    margin-bottom: 40px;
+    display: inline-block;
     font-family: var(--bold);
     color: var(--white-color);
 }
 
-.footer-form {
+footer form {
     gap: 20px;
-    width: 85%;
+    width: 100%;
     display: flex;
     align-items: center;
     padding-bottom: 60px;
@@ -684,32 +676,31 @@ footer::before {
     justify-content: center;
 }
 
-.footer-input {
+footer form input {
     flex: 1;
-    width: 600px;
+    width: 100%;
     outline: none;
-    font-size: 1.1rem;
-    padding: 18px 20px;
+    font-size: 1rem;
+    padding: 15px 20px;
     border-radius: 8px;
     font-family: var(--regular);
     background-color: transparent;
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.footer-input,
-.footer-input:focus::placeholder {
+footer form input,
+footer form input:focus::placeholder {
     color: var(--white-color);
 }
 
-.footer-input:focus {
+footer form input:focus {
     border: 1px solid var(--white-color);
 }
 
-.footer-divider {
+footer div > span {
     width: 100%;
     height: 2px;
     opacity: 0.7;
-    background: none;
     margin: 40px 0 30px 0;
     border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
@@ -719,28 +710,21 @@ footer::before {
     display: flex;
     margin-top: 0;
     align-items: center;
+    flex-direction: column;
     justify-content: space-between;
 }
 
-.social-links {
+.footer-bottom div {
     gap: 20px;
     display: flex;
 }
 
-.social-links a {
-    color: #fff;
-    font-size: 1.4rem;
+.footer-bottom div a {
     transition: color 0.3s;
-}
-
-.legal-links {
-    gap: 30px;
-    display: flex;
-}
-
-.legal-links a {
-    font-size: 1rem;
-    transition: color 0.3s;
+    color: var(--white-color);
     font-family: var(--light);
-    color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-bottom div:first-child a {
+    font-size: 1.4rem;
 }

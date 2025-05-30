@@ -91,7 +91,7 @@ const initObservers = () => {
         }), { threshold });
 
     const observer = createObserver(0.1);
-    document.querySelectorAll('p, .hero-text h1, section .title h2, .footer-tagline h2')
+    document.querySelectorAll('p, footer h2, .hero-text h1, section .title h2')
         .forEach(el => observer.observe(el));
 };
 
