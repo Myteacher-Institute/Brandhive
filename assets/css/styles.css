@@ -1,7 +1,7 @@
 /* Critical CSS */
 :root {
     --black-color: #0D0D0D;
-    --hover-color: #D38B1D;
+    --hover-color: #d38b1d;
     --white-color: #FFFFFF;
     --primary-color: #F8B411;
     --bold: 'Gilroy-Bold', sans-serif;
@@ -624,6 +624,80 @@ aside nav a.active,
     background-color: #F5F3F3;
 }
 
+/* Floating WhatsApp Button Styles*/
+.whatsapp-float {
+    width: 55px;
+    height: 55px;
+    right: 35px;
+    bottom: 55px;
+    display: flex;
+    outline: none;
+    z-index: 1000;
+    cursor: pointer;
+    position: fixed;
+    font-size: 32px;
+    text-align: center;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    color: var(--black-color);
+    background-color: var(--primary-color);
+    box-shadow: 0 4px 12px rgba(248, 180, 17, 0.4);
+}
+
+.whatsapp-float:hover {
+    background-color: var(--hover-color);
+    box-shadow: 0 6px 20px rgba(248, 180, 17, 0.6);
+}
+
+.whatsapp-float i {
+    font-size: inherit;
+}
+
+.whatsapp-float::before {
+    top: 50%;
+    opacity: 0;
+    right: 70px;
+    z-index: 10;
+    font-size: 13px;
+    padding: 6px 14px;
+    position: absolute;
+    visibility: hidden;
+    border-radius: 20px;
+    white-space: nowrap;
+    pointer-events: none;
+    content: "Chat with us!";
+    font-family: var(--regular);
+    color: var(--primary-color);
+    background: var(--black-color);
+    transform: translateY(-50%) scale(0.95);
+    transition: opacity 0.25s, transform 0.25s;
+}
+
+.whatsapp-float::after {
+    top: 50%;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    right: 62px;
+    content: "";
+    position: absolute;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid var(--black-color);
+}
+
+.whatsapp-float:hover::before,
+.whatsapp-float:hover::after,
+.whatsapp-float:focus::before,
+.whatsapp-float:focus::after {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-50%) scale(1);
+}
+
 /* Footer Styles */
 footer {
     padding: 0;
@@ -641,7 +715,7 @@ footer::before {
     background-color: rgba(0, 0, 0, 0.35);
 }
 
-footer > div {
+footer>div {
     width: 85%;
     z-index: 1;
     padding: 40px;
@@ -697,7 +771,7 @@ footer form input:focus {
     border: 1px solid var(--white-color);
 }
 
-footer div > span {
+footer div>span {
     width: 100%;
     height: 2px;
     opacity: 0.7;

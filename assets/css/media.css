@@ -1,102 +1,5 @@
-/* Tablet (768px and above) */
-@media (min-width: 768px) {
-
-    /* General Styling */
-    section .title h2,
-    .footer-tagline h2 {
-        font-size: 64px;
-    }
-
-    /* Header styles */
-    header .chat,
-    .portfolio-item:nth-child(n+3) {
-        display: block;
-    }
-
-    /* Hero section styles */
-    .hero .hero-text {
-        width: 855px;
-    }
-
-    /* About section styles */
-    .know-us-content {
-        min-height: 60vh;
-    }
-
-    .content-wrapper {
-        width: 50%;
-        text-align: center;
-    }
-
-    .content-wrapper p {
-        -webkit-line-clamp: 3;
-    }
-
-    /* Services section styles */
-    .services-container {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    /* why choose us section */
-    .why-choose-us-text {
-        width: 75%;
-        margin: 0 auto;
-    }
-
-    .video-wrapper {
-        width: 85%;
-        height: 70vh;
-    }
-
-    .play-pause-btn {
-        width: 150px;
-        height: 150px;
-        font-size: 6rem;
-    }
-
-    /* Clients section styles */
-    .carousel-slide {
-        width: 25%;
-    }
-
-    .carousel-slide img {
-        max-height: 60px;
-    }
-
-    /* Project section styles */
-    .portfolio-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .overlay-content {
-        max-width: 100%;
-    }
-
-    /* contact section styles */
-    #contact {
-        padding-inline: 20px;
-    }
-
-    .contact-row,
-    .footer-bottom {
-        flex-direction: row;
-    }
-
-    /* Footer Styles */
-    footer h2 {
-        max-width: 20ch;
-        font-size: 4.5rem;
-    }
-
-    footer form input {
-        width: 40%;
-    }
-}
-
 /* Laptop (1200px and above) */
 @media (min-width: 1200px) {
-
-    /* Header styles */
     header {
         align-items: flex-end;
     }
@@ -105,18 +8,19 @@
         display: flex;
     }
 
-    aside,
     header button {
         display: none;
     }
+}
 
-    /* Clients section styles */
-    .carousel-slide {
-        width: 20%;
+/* Tablet (768px and above) */
+@media (min-width: 768px) {
+    header .chat {
+        display: block;
     }
 
-    .carousel-slide img {
-        max-height: 80px;
+    .whatsapp-float {
+        display: none !important;
     }
 }
 
@@ -129,3 +33,244 @@
 @media (orientation: landscape) {
     /* Styles for landscape mode */
 }
+
+/* 
+@media screen and (max-width: 992px) {
+    .hero-text {
+        width: 90%;
+        margin-top: 220px;
+    }
+
+    .hero-text h1 {
+        font-size: 36px;
+    }
+
+    .hero-text a {
+        font-size: 2rem;
+        padding: 1rem 2.5rem;
+    }
+
+    .hero-media {
+        margin-top: 2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero-text {
+        margin-top: 200px;
+    }
+    
+    .hero-text h1 {
+        font-size: 30px;
+        align-items: flex-start;
+    }
+    
+    .hero-text a {
+        font-size: 1rem;
+        padding: 1rem 2rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .hero-container {
+        padding: 0 1.5rem;
+    }
+
+    .hero-text {
+        width: 100%;
+        margin-top: 180px;
+    }
+
+    .hero-text h1 {
+        font-size: 2.8rem;
+        margin-bottom: 1.5rem;
+        justify-content: flex-start;
+    }
+
+    .hero-text a {
+        font-size: 1.6rem;
+        padding: 0.8rem 1.8rem;
+    }
+
+    .hero-media {
+        width: 100%;
+        border-radius: 20px;
+        margin-top: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .hero-text {
+        margin-top: 160px;
+    }
+
+    .hero-text h1 {
+        font-size: 22px;
+    }
+
+    .hero-text a {
+        font-size: 12px;
+    }
+}
+
+
+@media screen and (max-width: 992px) {
+    .know-us-section-title {
+        padding: 5rem 2rem 1.5rem;
+    }
+
+    .know-us {
+        font-size: 6rem;
+    }
+
+    .know-us-content p {
+        font-size: 2.6rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .know-us {
+        width: 80%;
+        font-size: 5rem;
+    }
+
+    .know-us-content a {
+        font-size: 1.8rem;
+        padding: 1.2rem 3.5rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .know-us-section-title {
+        padding: 4rem 1.5rem 1rem;
+    }
+
+    .know-us-content {
+        padding: 6rem 1.5rem;
+    }
+
+    .know-us {
+        font-size: 4rem;
+    }
+
+    .know-us-content a {
+        font-size: 1.6rem;
+        padding: 1rem 3rem;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        padding: 60px 20px;
+    }
+
+    .service-title {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .brandhive-partners {
+        gap: 30px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .brandhive-partners img {
+        margin: 0 20px;
+        max-height: 60px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .brandhive-partners {
+        gap: 40px;
+        flex-direction: column;
+    }
+
+    .brandhive-partners img {
+        max-height: 50px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-item {
+        height: 240px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .carousel-slide {
+        min-width: calc(100% / 3);
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-slide {
+        min-width: calc(100% / 2);
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-slide {
+        min-width: 100%;
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .footer-tagline h2 {
+        font-size: 42px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-tagline h2 {
+        font-size: 36px;
+    }
+
+    .form-group {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .footer-info {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .footer-contact {
+        text-align: left;
+    }
+}
+
+@media (max-width: 580px) {
+    .footer-tagline h2 {
+        font-size: 28px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .legal-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+} */
