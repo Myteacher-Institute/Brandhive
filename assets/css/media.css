@@ -96,6 +96,14 @@
         align-items: center;
     }
 
+    /* Floating WhatsApp Button Styles*/
+    .whatsapp-float {
+        width: 80px;
+        height: 80px;
+        bottom: 100px;
+        font-size: 2.5rem;
+    }
+
     /* Footer Styles */
     footer h2 {
         max-width: 20ch;
