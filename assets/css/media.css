@@ -35,7 +35,7 @@
 
     /* About section styles */
     .know-us-content {
-        min-height: 40vh;
+        height: 500px;
     }
 
     .content-wrapper {
@@ -60,7 +60,7 @@
 
     .video-wrapper {
         width: 85%;
-        height: 70vh;
+        height: 850px;
     }
 
     .play-pause-btn {
@@ -80,7 +80,7 @@
 
     /* Project section styles */
     .portfolio-item {
-        height: 30vh;
+        height: 370px;
     }
 
     .overlay-content {
@@ -143,12 +143,17 @@
 
     /* About section styles */
     .know-us-content {
-        min-height: 60vh;
+        height: 470px;
     }
 
     /* Services section styles */
     .services-container {
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* why choose us section */
+    .video-wrapper {
+        height: 600px;
     }
 
     /* Clients section styles */
@@ -162,7 +167,7 @@
     }
 
     .portfolio-item {
-        height: 40vh;
+        height: 310px;
     }
 
     .overlay-content {

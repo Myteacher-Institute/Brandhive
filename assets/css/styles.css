@@ -330,9 +330,9 @@ aside nav a.active,
 
 .know-us-content {
     width: 100%;
+    height: 370px;
     display: grid;
     overflow: hidden;
-    min-height: 50vh;
     position: relative;
     place-items: center;
 }
@@ -438,7 +438,7 @@ aside nav a.active,
 
 .video-wrapper {
     width: 100%;
-    height: 60vh;
+    height: 440px;
     position: relative;
     border-radius: 25px;
     margin: 65px auto 0 auto;
@@ -530,7 +530,7 @@ aside nav a.active,
 
 .portfolio-item {
     width: 100%;
-    height: 40vh;
+    height: 300px;
     cursor: pointer;
     overflow: hidden;
     position: relative;
