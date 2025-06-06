@@ -70,11 +70,6 @@ const initNav = () => {
         if (aside.contains(link)) aside.classList.remove('open');
     }));
 
-    document.querySelector('.hero-text a')?.addEventListener('click', () => {
-        clearActive();
-        document.querySelector('header nav a[href="#contact"]')?.classList.add('active');
-    });
-
     document.querySelectorAll('header .logo, header .chat').forEach(el =>
         el.addEventListener('click', clearActive)
     );

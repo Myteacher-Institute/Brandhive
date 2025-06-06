@@ -138,7 +138,7 @@ header .chat,
 footer form button,
 .hero .hero-text a,
 .content-wrapper a,
-.portfolio-container>button {
+.portfolio-container a {
     font-size: 1rem;
     position: relative;
     border-radius: 10px;
