@@ -83,10 +83,6 @@
         height: 370px;
     }
 
-    .overlay-content {
-        width: 100%;
-    }
-
     /* contact section styles */
     #contact {
         padding-inline: 20px;
@@ -177,11 +173,6 @@
 
     .portfolio-item {
         height: 310px;
-    }
-
-    .overlay-content {
-        width: auto;
-        max-width: 100%;
     }
 
     /* contact section styles */
